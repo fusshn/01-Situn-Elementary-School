@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西屯願景</title>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/vision.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <nav>
+        <!-- <h1 class="fixed-title">台中市西屯國小</h1> -->
+        <a href="./index.html">
+            <div class="logo" id="logo">
+                <img src="./img/西屯國小校徽.png" alt="西屯國小校徽">
+            </div>
+        </a>
+        <div class="nav-buttons">
+            <!-- <a href="#news" class="nav-button news">最新消息</a> -->
+            <!-- <a href="#calendar" class="nav-button calendar">行事曆</a> -->
+            <div class="divider">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="66" viewBox="0 0 3 66" fill="none">
+                    <!-- <path d="M1.56506 1L1.56506 65" stroke="white" stroke-width="2" stroke-linecap="round" /> -->
+                </svg>
+            </div>
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <!-- 漢堡條 -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="relative h-screen">
+            <nav>
+                <img src="./img/l.png" alt="" class="close-btn-line">
+                <img src="./img/X.png" alt="" class="close-btn">
+
+                <div class="flex items-start">
+                    <a href="./index.html">
+                        <img src="./img/西屯國小校徽.png" alt="校徽" class="hamburger-logo">
+                    </a>
+                </div>
+            </nav>
+            <div class="vertical-lines">
+                <div class="vertical-line line-left"></div>
+                <div class="vertical-line line-right"></div>
+            </div>
+
+            <div class="flex justify-between w-full h-[calc(100vh-130px)]">
+                <div class="relative flex items-end w-1/3">
+                    <img src="./img/漢堡條貓頭鷹.png" alt="" class="hollow" id="hollow">
+                    <!-- <div class="social-icons">
+                    <div class="social-item">
+                        <img src="./img/西屯校友會.svg" alt="西屯校友會">
+                        <span>西屯校友會</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="./img/故事爸媽成長團.svg" alt="故事爸媽成長團">
+                        <span>故事爸媽成長團</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="./img/西屯粉絲團.svg" alt="西屯粉絲團">
+                        <span>西屯粉絲團</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="./img/youtube.svg" alt="校園影片頻道">
+                        <span>校園影片頻道</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="./img/校刊西屯兒童.svg" alt="校刊西屯兒童">
+                        <span>校刊西屯兒童</span>
+                    </div>
+                </div> -->
+                </div>
+
+                <div class="w-1/3">
+                    <div class="menu-container">
+                        <div class="flex flex-col gap-6">
+                            <div class="menu-item" data-tab="1">
+                                <div class="menu-text">關於西屯</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="2">
+                                <div class="menu-text">教師專區</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="3">
+                                <div class="menu-text">家長與學生專區</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="4">
+                                <div class="menu-text">西屯主題成果網站</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="5">
+                                <div class="menu-text">校務資料</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="6">
+                                <div class="menu-text">行政專區</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="7">
+                                <div class="menu-text">網站導覽</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/3">
+                    <div class="content-container">
+                        <!-- Content panels remain the same -->
+                        <div id="content1" class="content-panel">
+                            <a href="https://www.tc.edu.tw/page/d61c396e-63a3-4286-ac38-9874ac4092fe/school-content?id=714"
+                                class="content-item">學校概況</a>
+                            <a href="./history.html" class="content-item">西屯歷史</a>
+                            <a href="./location.html" class="content-item">交通位置</a>
+                            <a href="./vision.html" class="content-item">西屯願景</a>
+                            <a href="./SchoolMap.html" class="content-item">校園平面圖</a>
+                            <a href="./schoolprofile.html" class="content-item">School Profile</a>
+                        </div>
+
+                        <div id="content2" class="content-panel">
+                            <div class="content-item">校內雲端(限校內使用)</div>
+                            <a href="https://pemis.taichung.gov.tw/login.aspx" class="content-item">台中市教育單位查勤系統</a>
+                            <a href="https://school.tc.edu.tw/application/index/" class="content-item">雲端校務系統</a>
+                            <a href="https://www.inservice.edu.tw/" class="content-item">教師研習系統</a>
+                            <a href="https://www.sso.edu.tw/" class="content-item">教育體系單一簽入服務</a>
+                        </div>
+
+                        <div id="content3" class="content-panel">
+                            <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hd=st.tc.edu.tw&osid=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1206794255%3A1737427993163563&ddm=1"
+                                class="content-item">GSuite帳號登入</a>
+                            <a href="https://adl.edu.tw/HomePage/home/" class="content-item">因材網&學習拍</a>
+                            <a href="https://www.pagamo.org/" class="content-item">PaGamO</a>
+                            <a href="https://www.junyiacademy.org/" class="content-item">均一教育平台</a>
+                            <a href="https://fatraceschool.k12ea.gov.tw/frontend/search.html?school=193621"
+                                class="content-item">今日菜單</a>
+                        </div>
+
+                        <div id="content4" class="content-panel">
+                            <a href="https://class.tn.edu.tw/modules/tad_web/index.php?WebID=10219"
+                                class="content-item">閱來閱愛你</a>
+                            <a href="https://class.tn.edu.tw/modules/tad_web/index.php?WebID=14838"
+                                class="content-item">西屯愛鄉土</a>
+                            <a href="https://read.moe.edu.tw/193621/library" class="content-item">西屯國小圖書館</a>
+                        </div>
+
+                        <div id="content5" class="content-panel">
+                            <div class="content-item">課程發展</div>
+                            <div class="content-item">校園規範</div>
+                            <div class="content-item">校務公開資料</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="top">
+            <div class="route">
+                <span><a href="./index.html">首頁</a></span>
+                &nbsp;
+                <i class="fa-solid fa-angle-right"></i>
+                &nbsp;
+                <span>關於西屯</span>
+                &nbsp;
+                <i class="fa-solid fa-angle-right"></i>
+                &nbsp;
+                <span>西屯願景</span>
+            </div>
+            <div class="title" id="vision-title">西屯願景</div>
+        </div>
+
+        <!-- 左側按鈕區域 -->
+        <div class="left-side">
+            <div class="all-btn">
+                <!-- <a href="#vision-title"> -->
+                <a href="#">
+                    <button class="activity-btn">西屯願景</button>
+                </a>
+                <a href="#song-title">
+                    <button class="activity-btn">西屯校歌</button>
+                </a>
+                <a href="#emblem-title">
+                    <button class="activity-btn">西屯校徽</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- 主要內容區域 -->
+        <div class="content-area">
+            <div class="vision-section">
+                <div class="card-all">
+                    <div class="card card-1">
+                        <img src="./img/student-1.1.png" alt="">
+                        <div class="bot-text">
+                            <h3>活力</h3>
+                            <span>12年國教強調學生應具備知識、能力與態度以適應未來生活挑戰，學校積極發展多元五感課程，培養學生全人發展，展現好學力與好活力。</span>
+                        </div>
+                    </div>
+                    <div class="card card-2">
+                        <img src="./img/student-2.1.png" alt="">
+                        <div class="bot-text">
+                            <h3>創新</h3>
+                            <span>「核心素養」強調不以學科知識為限，關注學習與生活的結合。以「創意學，學創意」為核心，營造創意的環境，透過各項創意教學與競賽活動，培養具創意有競爭力的學生，打造創意優質的學園。</span>
+                        </div>
+                    </div>
+                    <div class="card card-3">
+                        <img src="./img/student-3.1.png" alt="">
+                        <div class="bot-text">
+                            <h3>永續</h3>
+                            <span>百年西屯在地文化，融入生活美學，培養學生「飲水思源、感恩惜福」的生命關懷，透過以融入式的主題統整課程，讓學習得以永續傳承，以適應未來生活挑戰。</span>
+                        </div>
+                    </div>
+                    <div class="card card-4">
+                        <img src="./img/student-4.1.png" alt="">
+                        <div class="bot-text">
+                            <h3>美善</h3>
+                            <span>規劃跨領域主題課程及學習領域活化，將閱讀、美學、科技、國際本位融入課程，多元閱讀中獲得改變生活價值的美感。透過人文關懷與實踐體驗活動，涵養學生心性，俾利終身學習及生活美學的實踐。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="song-title" id="song-title">
+                <h2>西屯校歌</h2>
+                <span class="en-title">School Song</span>
+            </div>
+            <div class="song-section">
+                <figure>
+                    <img src="./img/schoolsong.png" alt="">
+                    <!-- <audio controls src="./media/school-song.mp3"></audio> -->
+                    <!-- <a href="./media/school-song.mp3" download>Download School Song</a> -->
+
+
+                    <div class="custom-audio-player">
+                        <div class="audio-controls">
+                            <button id="playPauseBtn" class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                            <span id="currentTime" class="time">00:00</span><span>/</span><span id="duration"
+                                class="time">00:00</span>
+                            <div id="progressContainer" class="progress-container">
+                                <div id="progressBar" class="progress-bar"></div>
+                            </div>
+                            <div class="volume-container">
+                                <button id="muteBtn" class="volume-btn"><i class="fa-solid fa-volume-high"></i></button>
+                                <input type="range" id="volumeControl" class="volume-control" min="0" max="1"
+                                    step="0.01" value="1">
+                            </div>
+                            <div class="more-options">
+                                <button class="more-btn" id="moreBtn"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></button>
+                                <div id="moreMenu" class="more-menu">
+                                    <button class="more-item" id="downloadBtn">下載</button>
+                                </div>
+                            </div>
+                        </div>
+                        <audio id="audio" src="./media/school-song.mp3"></audio>
+                    </div>
+                </figure>
+            </div>
+
+            <div class="emblem-title" id="emblem-title">
+                <h2>西屯校徽</h2>
+                <span>School Emblem</span>
+            </div>
+            <div class="emblem-section">
+                <img src="./img/西屯國小校徽-2.png" alt="">
+                <div class="emblem-content">
+                    <div class="design">
+                        <h3>校徽設計</h3>
+                        <span>2023年適逢120周年校慶活動，為延續新與舊的傳承願景，重新設計校徽。圖形之設計：簡明易懂，又深具其內涵，於焉訂之。</span>
+                    </div>
+
+                    <div class="significance">
+                        <h3>校徽意義</h3>
+                        <span>新校徽沿襲舊校徽的設計脈絡，僅微調字體的線條，放入西屯的創校年份，突顯創校百年。</span>
+                        <br>
+                        <br>
+                        <span>加入英文字體，表示與國際接軌；當中使用哈佛紅當底色，延續「創新 永續 活力 美善」願景，象徵學校的熱情及邁向卓越之精神。</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer-top">
+                <div class="header-group">
+                    <div class="school-title">
+                        <img src="./img/西屯國小校徽.png" alt="學校logo" class="footer-logo">
+                        <div class="school-name">
+                            <h3>臺中市西屯區西屯國民小學</h3>
+                            <p>Situn Elementary School/ Taiwan Taichung</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-group">
+                    <div class="school-address">
+                        <p>臺中市西屯區西屯國小 地址：40749 台中市西屯路二段300號</p>
+                        <p>No. 300, Sec. 2, Xitun Rd., Xitun Dist., Taichung City 407 , Taiwan</p>
+                        <p>| TEL：04-27013534 | FAX：04-27026914</p>
+                    </div>
+                    <div class="nav-items">
+                        <div class="nav-item">
+                            <img src="./img/西屯校友會.svg" alt="西屯校友會">
+                            <span>校刊電子報</span>
+                        </div>
+                        <div class="nav-item">
+                            <img src="./img/故事爸媽成長團.svg" alt="故事爸媽成長團">
+                            <span>西屯粉絲團</span>
+                        </div>
+                        <div class="nav-item">
+                            <img src="./img/西屯粉絲團.svg" alt="西屯粉絲團">
+                            <span>故事爸媽成長團</span>
+                        </div>
+                        <div class="nav-item">
+                            <img src="./img/校刊西屯兒童.svg" alt="校刊西屯兒童">
+                            <span>校園影片頻道</span>
+                        </div>
+                        <div class="nav-item">
+                            <img src="./img/youtube.svg" alt="校園影片頻道">
+                            <span>校園影片頻道</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <a href="#" class="footer-link">隱私權政策</a>
+                    <a href="#" class="footer-link">版權宣告</a>
+                    <a href="#" class="footer-link">網站安全政策</a>
+                </div>
+                <div class="footer-right">
+                    <span>更新日期：2025-01-23</span>
+                    <span>瀏覽人次：694,161,645</span>
+                </div>
+            </div>
+        </footer>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+<script>
+    // 漢堡
+    document.addEventListener('DOMContentLoaded', () => {
+        // 獲取所需元素
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.querySelector('.close-btn');
+        const menu = document.getElementById('hamburger-menu');
+        const menuItems = document.querySelectorAll('.menu-item');
+        const contentPanels = document.querySelectorAll('.content-panel');
+        let activeItem = null;
+
+        const adminMenuItem = document.querySelector('.menu-item[data-tab="6"] .highlight-bar');
+        const siteMapMenuItem = document.querySelector('.menu-item[data-tab="7"] .highlight-bar');
+
+        // 隐藏高亮条
+        if (adminMenuItem) {
+            adminMenuItem.style.display = 'none';
+        }
+        if (siteMapMenuItem) {
+            siteMapMenuItem.style.display = 'none';
+        }
+        // 切換選單
+        function toggleMenu() {
+            const isOpen = menu.style.right === '0px';
+
+            if (isOpen) {
+                menu.style.right = '-100%';
+                document.body.style.overflow = '';
+
+                // 重置所有面板和選單項目
+                contentPanels.forEach(panel => {
+                    panel.classList.remove('active');
+                    panel.style.transform = 'translateX(30px)';
+                    panel.style.opacity = '0';
+                    panel.style.display = 'none';
+                    panel.style.height = '0';
+
+                    // 確保面板回到原始位置
+                    const panelParent = document.querySelector('.content-container');
+                    if (panelParent && panel.parentElement !== panelParent) {
+                        panelParent.appendChild(panel);
+                    }
+                });
+
+                menuItems.forEach(item => {
+                    item.classList.remove('active');
+                    item.style.backgroundColor = '';
+                    const text = item.querySelector('.menu-text');
+                    if (text) text.style.color = 'white';
+                });
+
+                activeItem = null;
+            } else {
+                menu.style.right = '0';
+                document.body.style.overflow = 'hidden';
+
+                // 重新初始化第一個選項
+                if (window.innerWidth > 480) {
+                    const firstItem = menuItems[0];
+                    if (firstItem) {
+                        firstItem.click();
+                    }
+                }
+            }
+        }
+
+        // 桌面版選單切換
+        function switchDesktopContent(item) {
+            const tabId = item.getAttribute('data-tab');
+            const isSpecialTab = tabId === '6' || tabId === '7';
+
+            // 重置所有面板
+            contentPanels.forEach(panel => {
+                panel.classList.remove('active');
+                panel.style.transform = 'translateX(30px)';
+                panel.style.opacity = '0';
+                panel.style.display = 'none';
+            });
+
+            // 重置所有選單項目
+            menuItems.forEach(menuItem => {
+                menuItem.classList.remove('active');
+                menuItem.style.backgroundColor = '';
+                const text = menuItem.querySelector('.menu-text');
+                if (text) text.style.color = 'white';
+            });
+
+            // 設置新的活動項目
+            item.classList.add('active');
+            item.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            const itemText = item.querySelector('.menu-text');
+            if (itemText) itemText.style.color = 'white';
+
+            if (isSpecialTab) return;
+
+            // 啟用對應的面板
+            const selectedPanel = document.getElementById(`content${tabId}`);
+            if (selectedPanel) {
+                selectedPanel.style.display = 'block';
+                selectedPanel.classList.add('active');
+
+                // 重新計算位置
+                const menuContainer = document.querySelector('.menu-container');
+                if (menuContainer) {
+                    const containerRect = menuContainer.getBoundingClientRect();
+                    const contentItems = selectedPanel.querySelectorAll('.content-item');
+
+                    contentItems.forEach((contentItem, index) => {
+                        const correspondingMenuItem = menuItems[index];
+                        if (correspondingMenuItem) {
+                            const menuRect = correspondingMenuItem.getBoundingClientRect();
+                            contentItem.style.position = 'absolute';
+                            contentItem.style.top = `${menuRect.top - containerRect.top}px`;
+                        }
+                    });
+                }
+
+                // 動畫效果
+                requestAnimationFrame(() => {
+                    selectedPanel.style.transform = 'translateX(0)';
+                    selectedPanel.style.opacity = '1';
+                });
+            }
+
+            activeItem = item;
+        }
+
+        // 手機版選單切換
+        function switchMobileContent(item) {
+            const tabId = item.getAttribute('data-tab');
+            if (tabId === '6' || tabId === '7') return;
+
+            const panel = document.getElementById(`content${tabId}`);
+            if (!panel) return;
+
+            const isExpanded = item.classList.contains('active');
+
+            // 重置所有面板和選單項目
+            menuItems.forEach(menuItem => {
+                menuItem.classList.remove('active');
+                const otherPanel = document.getElementById(`content${menuItem.getAttribute('data-tab')}`);
+                if (otherPanel) {
+                    otherPanel.style.display = 'none';
+                    otherPanel.style.height = '0';
+                    otherPanel.style.transform = 'none';
+                    otherPanel.style.opacity = '1';
+                    // 確保面板回到原始位置
+                    const panelParent = document.querySelector('.content-container');
+                    if (panelParent && otherPanel.parentElement !== panelParent) {
+                        panelParent.appendChild(otherPanel);
+                    }
+                }
+            });
+
+            // 如果當前項目已經展開，則只做重置
+            if (isExpanded) {
+                return;
+            }
+
+            // 設置當前項目和面板的狀態
+            item.classList.add('active');
+            panel.style.display = 'block';
+            panel.style.height = 'auto';
+
+            // 將面板插入到正確位置
+            const itemParent = item.parentNode;
+            if (itemParent) {
+                itemParent.insertBefore(panel, item.nextSibling);
+            }
+        }
+
+        // 事件監聽
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+
+        menu.addEventListener('click', (e) => {
+            if (e.target === menu) {
+                toggleMenu();
+            }
+        });
+
+        // 選單項目點擊
+        menuItems.forEach(item => {
+            const menuText = item.querySelector('.menu-text');
+
+            if (menuText) {
+                menuText.addEventListener('mouseenter', () => {
+                    if (window.innerWidth > 480) {
+                        menuText.style.transform = 'translateX(10px)';
+                        menuText.style.color = '#FFEFCB';
+                    }
+                });
+
+                menuText.addEventListener('mouseleave', () => {
+                    if (window.innerWidth > 480) {
+                        menuText.style.transform = '';
+                        menuText.style.color = item === activeItem ? 'white' : 'white';
+                    }
+                });
+            }
+
+            item.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (window.innerWidth <= 480) {
+                    switchMobileContent(item);
+                } else {
+                    switchDesktopContent(item);
+                }
+            });
+        });
+
+        // 視窗大小變化處理
+        window.addEventListener('resize', () => {
+            const contentContainer = document.querySelector('.content-container');
+
+            if (window.innerWidth <= 480) {
+                // 重置所有狀態
+                menuItems.forEach(item => {
+                    item.classList.remove('active');
+                    const panel = document.getElementById(`content${item.getAttribute('data-tab')}`);
+                    if (panel) {
+                        panel.style.display = 'none';
+                        panel.style.height = '0';
+                        // 確保面板回到原始位置
+                        if (contentContainer && panel.parentElement !== contentContainer) {
+                            contentContainer.appendChild(panel);
+                        }
+                    }
+                });
+            } else {
+                // 桌面版初始化
+                menuItems.forEach(item => {
+                    item.classList.remove('active');
+                    const panel = document.getElementById(`content${item.getAttribute('data-tab')}`);
+                    if (panel) {
+                        panel.style.display = 'none';
+                    }
+                });
+                const firstItem = menuItems[0];
+                if (firstItem) firstItem.click();
+            }
+        });
+
+        // 初始化
+        if (window.innerWidth > 480) {
+            const firstItem = menuItems[0];
+            if (firstItem) firstItem.click();
+        }
+    });
+
+</script>
+
+
+
+
+
+
+
+<!-- 音訊自訂 -->
+<script>
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const audio = document.getElementById("audio");
+    const progressBar = document.getElementById("progressBar");
+    const progressContainer = document.getElementById("progressContainer");
+    const volumeControl = document.getElementById("volumeControl");
+    const muteBtn = document.getElementById("muteBtn");
+    const currentTimeDisplay = document.getElementById("currentTime");
+    const durationDisplay = document.getElementById("duration");
+    const moreBtn = document.getElementById("moreBtn");
+    const moreMenu = document.getElementById("moreMenu");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    // 播放/暫停功能
+    playPauseBtn.addEventListener("click", function () {
+        if (audio.paused) {
+            audio.play();
+            playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        } else {
+            audio.pause();
+            playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+        }
+    });
+
+    // 更新進度條
+    audio.addEventListener("timeupdate", function () {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = progress + "%";
+
+        const currentMinutes = Math.floor(audio.currentTime / 60);
+        const currentSeconds = Math.floor(audio.currentTime % 60);
+        const durationMinutes = Math.floor(audio.duration / 60);
+        const durationSeconds = Math.floor(audio.duration % 60);
+
+        currentTimeDisplay.textContent = `${currentMinutes}:${currentSeconds < 10 ? "0" + currentSeconds : currentSeconds}`;
+        durationDisplay.textContent = `${durationMinutes}:${durationSeconds < 10 ? "0" + durationSeconds : durationSeconds}`;
+    });
+
+    // 進度條拖動
+    progressContainer.addEventListener("click", function (e) {
+        const clickPosition = (e.offsetX / progressContainer.offsetWidth) * audio.duration;
+        audio.currentTime = clickPosition;
+    });
+
+    // 音量控制
+    volumeControl.addEventListener("input", function () {
+        audio.volume = volumeControl.value;
+
+        // 根據音量調整靜音/音量圖標
+        if (audio.volume === 0) {
+            muteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>'; // 當音量為0時顯示禁聲喇叭
+        } else if (audio.volume === 1) {
+            muteBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>'; // 當音量為最大時顯示正常喇叭
+        } else {
+            muteBtn.innerHTML = '<i class="fa-solid fa-volume-low"></i>'; // 當音量不為0或最大時顯示較小音量的喇叭
+        }
+    });
+
+    // 靜音功能
+    muteBtn.addEventListener("click", function () {
+        if (audio.muted) {
+            audio.muted = false;
+            muteBtn.innerHTML = audio.volume === 0 ? '<i class="fa-solid fa-volume-xmark"></i>' : '<i class="fa-solid fa-volume-high"></i>';
+        } else {
+            audio.muted = true;
+            muteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>'; // 按下靜音按鈕時顯示禁聲喇叭
+        }
+    });
+
+    // 顯示/隱藏更多選項菜單
+    moreBtn.addEventListener("click", function () {
+        moreMenu.style.display = moreMenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // 點擊下載按鈕進行下載
+    downloadBtn.addEventListener("click", function () {
+        const link = document.createElement("a");
+        link.href = audio.src; // 使用音頻的URL
+        link.download = "school-song.mp3"; // 設定下載文件的名稱
+        link.click(); // 觸發點擊下載
+    });
+</script>
+
+<!-- 下滑頁面時隱藏左側導覽列 -->
+<script>
+    window.addEventListener('scroll', function () {
+        var leftSide = document.querySelector('.left-side');
+        var scrollPosition = window.scrollY;
+        var windowHeight = window.innerHeight;
+        var documentHeight = document.documentElement.scrollHeight;
+
+        // 當滾動接近底部（離底部 300px 時），隱藏左側導覽列
+        if (scrollPosition + windowHeight >= documentHeight - 300) {
+            leftSide.style.opacity = '0';  // 導覽列完全透明
+            leftSide.style.visibility = 'hidden';  // 完全隱藏導覽列
+        } else {
+            leftSide.style.opacity = '1';  // 恢復導覽列顯示
+            leftSide.style.visibility = 'visible';  // 恢復可見性
+        }
+    });
+</script>
+
+</html>

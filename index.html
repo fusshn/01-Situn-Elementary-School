@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>臺中市西屯國民小學</title>
+    <link rel="stylesheet" href="./css/project.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main">
+        <div class="upper-part">
+
+            <nav>
+                <h1 class="fixed-title">臺中市西屯國小</h1>
+                <a
+                    href="./index.html">
+                    <div class="logo" id="logo">
+                        <img src="./img/西屯國小校徽.png" alt="西屯國小校徽">
+                    </div>
+                </a>
+                <div class="nav-buttons">
+                    <a href="#news" class="nav-button news">最新消息</a>
+                    <div class="divider">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="66" viewBox="0 0 3 66" fill="none">
+                            <path d="M1.56506 1L1.56506 65" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <a href="#calendar" class="nav-button calendar">行事曆</a>
+                    <div class="divider">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="66" viewBox="0 0 3 66" fill="none">
+                            <path d="M1.56506 1L1.56506 65" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <button class="hamburger" id="hamburger-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+            <!-- 漢堡條 -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="relative h-screen">
+                    <nav>
+                        <img src="./img/l.png" alt="" class="close-btn-line">
+                        <img src="./img/X.png" alt="" class="close-btn">
+
+                        <div class="flex items-start">
+                            <a
+                                href="./index.html">
+                                <img src="./img/西屯國小校徽.png" alt="校徽" class="hamburger-logo">
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="vertical-lines">
+                        <div class="vertical-line line-left"></div>
+                        <div class="vertical-line line-right"></div>
+                    </div>
+
+                    <div class="flex justify-between w-full h-[calc(100vh-130px)]">
+                        <div class="relative flex items-end w-1/3">
+                            <img src="./img/漢堡條貓頭鷹.png" alt="" class="hollow" id="hollow">
+                            <!-- <div class="social-icons">
+                                <div class="social-item">
+                                    <img src="./img/西屯校友會.svg" alt="西屯校友會">
+                                    <span>西屯校友會</span>
+                                </div>
+                                <div class="social-item">
+                                    <img src="./img/故事爸媽成長團.svg" alt="故事爸媽成長團">
+                                    <span>故事爸媽成長團</span>
+                                </div>
+                                <div class="social-item">
+                                    <img src="./img/西屯粉絲團.svg" alt="西屯粉絲團">
+                                    <span>西屯粉絲團</span>
+                                </div>
+                                <div class="social-item">
+                                    <img src="./img/youtube.svg" alt="校園影片頻道">
+                                    <span>校園影片頻道</span>
+                                </div>
+                                <div class="social-item">
+                                    <img src="./img/校刊西屯兒童.svg" alt="校刊西屯兒童">
+                                    <span>校刊西屯兒童</span>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div class="w-1/3">
+                            <div class="menu-container">
+                                <div class="flex flex-col gap-6">
+                                    <div class="menu-item" data-tab="1">
+                                        <div class="menu-text">關於西屯</div>
+                                        <div class="highlight-bar"></div>
+                                    </div>
+                                    <div class="menu-item" data-tab="2">
+                                        <div class="menu-text">教師專區</div>
+                                        <div class="highlight-bar"></div>
+                                    </div>
+                                    <div class="menu-item" data-tab="3">
+                                        <div class="menu-text">家長與學生專區</div>
+                                        <div class="highlight-bar"></div>
+                                    </div>
+                                    <div class="menu-item" data-tab="4">
+                                        <div class="menu-text">西屯主題成果網站</div>
+                                        <div class="highlight-bar"></div>
+                                    </div>
+                                    <div class="menu-item" data-tab="5">
+                                        <div class="menu-text">校務資料</div>
+                                        <div class="highlight-bar"></div>
+                                    </div>
+                                    <div class="menu-item" data-tab="6">
+                                        <div class="menu-text">行政專區</div>
+                                        <div class="highlight-bar"></div>
+                                    </div>
+                                    <div class="menu-item" data-tab="7">
+                                        <div class="menu-text">網站導覽</div>
+                                        <div class="highlight-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-1/3">
+                            <div class="content-container">
+                                <!-- Content panels remain the same -->
+                                <div id="content1" class="content-panel">
+                                    <a href="https://www.tc.edu.tw/page/d61c396e-63a3-4286-ac38-9874ac4092fe/school-content?id=714" class="content-item">學校概況</a>
+                                    <a href="./history.html" class="content-item">西屯歷史</a>
+                                    <a href="./location.html" class="content-item">交通位置</a>
+                                    <a href="./vision.html" class="content-item">西屯願景</a>
+                                    <a href="./schoolMap.html" class="content-item">校園平面圖</a>
+                                    <a href="./schoolprofile.html" class="content-item en">School Profile</a>
+                                </div>
+
+                                <div id="content2" class="content-panel">
+                                    <div class="content-item">校內雲端(限校內使用)</div>
+                                    <a href="https://pemis.taichung.gov.tw/login.aspx" class="content-item">台中市教育單位查勤系統</a>
+                                     <a href="https://school.tc.edu.tw/application/index/" class="content-item">雲端校務系統</a>
+                                    <a href="https://www.inservice.edu.tw/" class="content-item">教師研習系統</a>
+                                    <a href="https://www.sso.edu.tw/" class="content-item">教育體系單一簽入服務</a>
+                                </div>
+
+                                <div id="content3" class="content-panel">
+                                    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hd=st.tc.edu.tw&osid=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1206794255%3A1737427993163563&ddm=1" class="content-item">GSuite帳號登入</a>
+                                    <a href="https://adl.edu.tw/HomePage/home/" class="content-item">因材網&學習拍</a>
+                                    <a href="https://www.pagamo.org/" class="content-item">PaGamO</a>
+                                    <a href="https://www.junyiacademy.org/" class="content-item">均一教育平台</a> 
+                                    <a href="https://fatraceschool.k12ea.gov.tw/frontend/search.html?school=193621" class="content-item">今日菜單</a>
+                                </div>
+
+                                <div id="content4" class="content-panel">
+                                    <a href="https://class.tn.edu.tw/modules/tad_web/index.php?WebID=10219" class="content-item">閱來閱愛你</a>
+                                    <a href="https://class.tn.edu.tw/modules/tad_web/index.php?WebID=14838" class="content-item">西屯愛鄉土</a>
+                                    <a href="https://read.moe.edu.tw/193621/library" class="content-item">西屯國小圖書館</a>
+                                </div>
+
+                                <div id="content5" class="content-panel">
+                                    <div class="content-item">課程發展</div>
+                                    <div class="content-item">校園規範</div>
+                                    <div class="content-item">校務公開資料</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-container">
+                <div class="banner">
+                    <div class="owl-container" id="owl-container">
+                        <img id="first-owl" src="./img/貓頭鷹飛入.png" alt="Flying Owl">
+                        <div class="eye left">
+                            <div class="pupil" id="left-pupil"></div>
+                        </div>
+                        <div class="eye right">
+                            <div class="pupil" id="right-pupil"></div>
+                        </div>
+                    </div>
+                    <img src="./img/主照片.png" alt="學校banner圖片" class="banner-img">
+                </div>
+            </div>
+
+            <div class="news-section" id="news">
+                <h2>最新消息<span>News</span></h2>
+                <a href="./latest-news.html"
+                    class="arrow-link">
+                    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="cn">
+                <a href="./NewsContent.html" class="news-card">
+                    <div class="news-header">
+                        <span class="news-date">2024-12-24</span>
+                    <div class="department">
+                        <div class="department-tag">學生活動</div>
+                        <div class="more-btn">學務處</div>
+                    </div>
+                    </div>
+                    <p class="news-content">
+                        為協助青少年揮別迷網，提升3C自控力，本校中亞聯大網路成癮防治中心將辦理2025青少年幸福不迷網：三天兩夜無網路住宿營隊（第26期）ＮＥＷ 
+                         
+                    </p>
+                </a>
+                <div class="news-card">
+                    <div class="news-header">
+                        <span class="news-date">2024-12-24</span>
+                        <div class="department">
+                            <div class="department-tag">重要公告</div>
+                            <div class="more-btn">教務處</div>
+                        </div>
+                    </div>
+                    <p class="news-content">
+                        轉知：近期發生多起退休族群詐騙網路訊息，將房產設定抵押而遭詐騙之案例，請多加注意相關詐騙類型。
+                    </p>
+                </div>
+                <div class="news-card">
+                    <div class="news-header">
+                        <span class="news-date">2024-12-24</span>
+                        <div class="department">
+                            <div class="department-tag">重要公告</div>
+                            <div class="more-btn">教務處</div>
+                        </div>
+                    </div>
+                    <p class="news-content">
+                        轉知：近期發生多起退休族群詐騙網路訊息，將房產設定抵押而遭詐騙之案例，請多加注意相關詐騙類型。
+                    </p>
+                </div>
+            </div>
+
+            <section class="events-photos-section">
+                <h2 class="events-photos-title">活動照片<span>Event Photos</span></h2>
+                <div class="photos-grid">
+                    <div class="photo-card">
+                        <div class="photo-container">
+                            <img src="./img/輪播卡片1.jpg" alt="運動會" class="photo-img">
+                        </div>
+                        <p class="photo-description"><span>2024</span>&nbsp;學校宣社區聯合運動會</p>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-container">
+                            <img src="./img/主照片.png" alt="家長關懷" class="photo-img">
+                        </div>
+                        <p class="photo-description"><span>2024</span>&nbsp;家長關懷</p>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-container">
+                            <img src="./img/輪播卡片3.jpg" alt="家長關懷" class="photo-img">
+                        </div>
+                        <p class="photo-description"><span>2024</span>&nbsp;國際躲避球競賽</p>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-container">
+                            <img src="./img/輪播卡片4.png" alt="家長關懷" class="photo-img">
+                        </div>
+                        <p class="photo-description"><span>2024</span>&nbsp;最優選班級</p>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-container">
+                            <img src="./img/輪播卡片5.png" alt="家長關懷" class="photo-img">
+                        </div>
+                        <p class="photo-description"><span>2024</span>&nbsp;國際交換學生活動</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="hero-section">
+                <div class="left-image">
+                    <img src="./img/看書貓頭鷹.png" alt="Left decorative image" />
+                </div>
+
+                <button class="go-top" id="goTop" aria-label="回到頂部">TOP</button>
+
+                <div class="vertical-text">
+                    <div class="text-left" id="#text-left">創新向未來！</div>
+                    <div class="text-right">樂學在西屯，</div>
+                </div>
+
+                <div class="right-image">
+                    <img src="./img/右邊貓頭鷹.png" alt="Right decorative image" />
+                </div>
+            </div>
+        </div>
+
+
+        <section class="school-info">
+            <div class="school-info-header">
+                <h2>校園資訊</h2>
+                <span>Information</span>
+            </div>
+
+            <div class="feature-rows">
+                <!-- 第一行 -->
+                <div class="feature-group">
+                    <div class="feature-mascot-wrapper">
+                        <img src="./img/胖胖.png" alt="互動教育吉祥物" class="feature-mascot">
+                        <img src="./img/躲避球.png" alt="" id="ball"
+                            style="position: absolute; top: 22%; left: 15%; width: 100px; height: 100px;">
+                    </div>
+                    <div class="feature-main">
+                        <img src="./img/雙語教育.png" alt="互動教育標題" class="feature-title">  
+                        <div class="feature-content-wrapper bilingual">
+                            <a href="./BilingualEducation.html" class="content-link">
+                                <img src="./img/ABC.png" alt="互動教育" class="feature-content">
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- 第二行 -->
+                <div class="feature-group">
+                    <div class="feature-main">
+                        <div class="feature-content-wrapper gifted">
+                            <a href="./gifted.html" class="content-link">
+                            <img src="./img/資優生.png" alt="互動教育" class="feature-content">
+                            </a>
+                        </div>
+                        <img src="./img/資優生資訊.png" alt="互動教育標題" class="feature-title-middle">
+                    </div>
+                    <div class="feature-mascot-wrapper">
+                        <img src="./img/胖胖接球.png" alt="互動教育吉祥物" class="feature-mascot-middle">
+                    </div>
+                </div>
+
+                <!-- 第三行 -->
+                <div class="feature-group">
+                    <div class="feature-mascot-wrapper">
+                        <img src="./img/女胖胖.png" alt="互動教育吉祥物" class="feature-mascot">
+                    </div>
+                    <div class="feature-main">
+                        <img src="./img/傑出表現.png" alt="互動教育標題" class="feature-title">
+                        
+                        <div class="feature-content-wrapper outstanding">
+                            <a href="./outstanding.html" class="content-link">
+                                <img src="./img/獎盃.png" alt="互動教育" class="feature-content">
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 影片區 -->
+        <section class="video-section">
+            <div class="video-header">
+                <div class="video-title">
+                    <h2>活動影片</h2>
+                    <span>Event Video</span>
+                </div>
+                <svg class="arrow-icon-video" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </div>
+            <!-- 影片區 內容-->
+            <div class="video-grid">
+                <!-- 第一行 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="./img/v1.png" alt="運動大會接力">
+                    </div>
+                    <p class="video-description">運動大會接力</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="./img/v2.png" alt="學校參訪">
+                    </div>
+                    <p class="video-description">學校參訪</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="./img/v3.png" alt="年度腳踏車大會">
+                    </div>
+                    <p class="video-description">年度腳踏車大會</p>
+                </div>
+
+                <!-- 第二行 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="./img/v4.png" alt="戶外教學">
+                    </div>
+                    <p class="video-description">戶外教學</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="./img/v5.png" alt="教師備課">
+                    </div>
+                    <p class="video-description">教師備課</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="./img/v6.png" alt="營養午餐短片">
+                    </div>
+                    <p class="video-description">營養午餐短片</p>
+                </div>
+            </div>
+        </section>
+        <!-- 下方橘色底部分 -->
+        <section class="calendar-section">
+            <!-- 插畫區 -->
+            <div class="branches-container">
+                <div class="branchesleft-area">
+                    <img id="vignetteleft" src="./img/左邊樹枝.png" alt="左邊樹枝" />
+                </div>
+                <div class="illustration-right">
+                    <img id="vignette" class="owl-img default" src="./img/站在樹枝上.png" alt="右邊樹枝貓頭鷹" />
+                    <img id="vignette-hover" class="owl-img hover" src="./img/站在樹枝上hover.png" alt="右邊樹枝貓頭鷹 hover" />
+                </div>
+                <div class="branchesright-area">
+                    <img id="vignetteright" src="./img/右邊樹枝.png" alt="右邊樹枝" />
+                </div>
+            </div>
+            <!-- 行事曆區 -->
+            <section class="calendar-area">
+                <div id="calendar">
+                    <h2 class="calendar-area-title">行事曆 <span>Calendar</span></h2>
+
+                    <!-- 0108新版 -->
+                    <div class="calendar-container">
+                        <!-- 左側月曆 -->
+                        <div class="calendar-left">
+                            <div class="calendar-header">
+                                <button id="prevMonth">&lt;</button>
+                                <span id="monthYear">2024年 11月</span>
+                                <button id="nextMonth">&gt;</button>
+                            </div>
+                            <div class="calendar-main">
+                                <div class="day-header">日</div>
+                                <div class="day-header">一</div>
+                                <div class="day-header">二</div>
+                                <div class="day-header">三</div>
+                                <div class="day-header">四</div>
+                                <div class="day-header">五</div>
+                                <div class="day-header">六</div>
+                            </div>
+                            <div class="days" id="days"></div>
+                        </div>
+
+                        <!-- 右側活動詳情 -->
+                        <div class="event-details">
+                            <h3 id="eventTitle">選擇日期以查看活動</h3>
+                            <p id="eventDescription">暫無活動資訊</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <div class="branchesleftbottom-area">
+                <img id="vignetteright-bottn" src="./img/左下樹枝.png" alt="左邊樹枝" />
+            </div>
+            <!-- 防疫區 -->
+            <section class="epidemicprevention-area">
+                <h2 class="epidemicprevention-area-title">防疫專區<span>Epidemic Prevention Zone</span></h2>
+                <div class="epidemicprevention-container">
+                    <div class="epidemicprevention-item">
+                        <div class="epidemicprevention-img">
+                            <img src="./img/防疫1.png" alt="環境清潔">
+                        </div>
+                        <p class="epidemicprevention-text">防疫宣導，守護健康每一天！</p>
+                    </div>
+                    <div class="epidemicprevention-item">
+                        <div class="epidemicprevention-img">
+                            <img src="./img/防疫2.png" alt="環境清潔">
+                        </div>
+                        <p class="epidemicprevention-text">會口罩、勤洗手、防疫先行！</p>
+                    </div>
+                    <div class="epidemicprevention-item">
+                        <div class="epidemicprevention-img">
+                            <img src="./img/防疫3.png" alt="環境清潔">
+                        </div>
+                        <p class="epidemicprevention-text">人人防疫，共創健康校園！</p>
+                    </div>
+                </div>
+            </section>
+            <img class="bor1" src="./img/城堡.png" alt="底部城堡">
+        </section>
+
+        <img class="bor" src="./img/底部照片.png" alt="底部照片">
+
+    </div>
+    <footer>
+        <div class="footer-top">
+            <div class="header-group">
+                <div class="school-title">
+                    <img src="./img/西屯國小校徽.png" alt="學校logo" class="footer-logo">
+                    <div class="school-name">
+                        <h3>臺中市西屯區西屯國民小學</h3>
+                        <p>Situn Elementary School/ Taiwan Taichung</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-group">
+                <div class="school-address">
+                    <p>臺中市西屯區西屯國小 地址：40749 台中市西屯路二段300號</p>
+                    <p>No. 300, Sec. 2, Xitun Rd., Xitun Dist., Taichung City 407 , Taiwan</p>
+                    <p>| TEL：04-27013534 | FAX：04-27026914</p>
+                </div>
+                <div class="nav-items">
+                    <div class="nav-item">
+                        <img src="./img/西屯校友會.svg" alt="西屯校友會">
+                        <span>校刊電子報</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./img/故事爸媽成長團.svg" alt="故事爸媽成長團">
+                        <span>西屯粉絲團</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./img/西屯粉絲團.svg" alt="西屯粉絲團">
+                        <span>故事爸媽成長團</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./img/校刊西屯兒童.svg" alt="校刊西屯兒童">
+                        <span>校園影片頻道</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./img/youtube.svg" alt="校園影片頻道">
+                        <span>校園影片頻道</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-left">
+                <a href="#" class="footer-link">隱私權政策</a>
+                <a href="#" class="footer-link">版權宣告</a>
+                <a href="#" class="footer-link">網站安全政策</a>
+            </div>
+            <div class="footer-right">
+                <span>更新日期：2025-01-23</span>
+                <span>瀏覽人次：694,161,645</span>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+    // 西屯國小和校徽滾輪往下消失動畫
+let lastScrollY = window.scrollY;
+const title = document.querySelector('.fixed-title');
+const hamburgerHeader = document.querySelector('.hamburger-header');
+const nav = document.querySelector('nav');
+const logo = document.querySelector('.logo');
+const bor1Element = document.querySelector('.bor1');
+const banner = document.querySelector('.banner');
+const navButtons = document.querySelector('.nav-buttons');
+const newsButton = document.querySelector('.nav-button.news');
+const calendarButton = document.querySelector('.nav-button.calendar');
+const dividers = document.querySelectorAll('.divider');
+const showThreshold = 100;
+
+// 添加過渡效果
+if (newsButton && calendarButton && navButtons) {
+    [newsButton, calendarButton, ...dividers].forEach(el => {
+        el.style.transition = 'all 0.3s ease';
+    });
+    navButtons.style.transition = 'all 0.3s ease';
+}
+
+// 平滑滾動效果
+document.addEventListener('DOMContentLoaded', () => {
+    const newsButton = document.querySelector('.nav-button.news');
+    const calendarButton = document.querySelector('.nav-button.calendar');
+
+    if (newsButton) {
+        newsButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const newsSection = document.querySelector('#news');
+            
+            if (newsSection) {
+                const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+                const targetPosition = newsSection.offsetTop - navHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+
+    if (calendarButton) {
+        calendarButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const calendarSection = document.querySelector('.calendar-area');
+            
+            if (calendarSection) {
+                const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+                const targetPosition = calendarSection.offsetTop - navHeight - 100;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+});
+
+// 滾動處理
+window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    const bor1Bottom = bor1Element?.getBoundingClientRect().bottom;
+    const isMobile = window.innerWidth <= 480;
+
+    if (currentScroll <= showThreshold) {
+        // 展開狀態
+        title.style.transform = 'translateY(0)';
+        title.style.opacity = '1';
+        logo.style.transform = 'translateY(0)';
+        logo.style.opacity = '1';
+
+        if (newsButton && calendarButton && !isMobile) {
+            newsButton.style.width = '180px';
+            newsButton.style.opacity = '1';
+            newsButton.style.padding = '';
+            newsButton.style.margin = '';
+            calendarButton.style.width = '180px';
+            calendarButton.style.opacity = '1';
+            calendarButton.style.padding = '';
+            calendarButton.style.margin = '';
+            
+            dividers.forEach(divider => {
+                divider.style.width = '34px';
+                divider.style.opacity = '1';
+                divider.style.margin = '';
+            });
+
+            navButtons.style.padding = '21px 60px 15px 20px';
+            navButtons.style.backgroundColor = '#D70913a3';
+            navButtons.style.marginRight = '-60px';
+            navButtons.style.borderRadius = '0 0 0 60px';
+            navButtons.style.position = 'relative';
+            navButtons.style.top = 'auto';
+            navButtons.style.right = 'auto';
+            navButtons.style.width = 'auto';
+        }
+    } else {
+        // 收縮狀態
+        title.style.transform = 'translateY(-100%)';
+        title.style.opacity = '0';
+        logo.style.transform = 'translateY(-100%)';
+        logo.style.opacity = '0';
+
+        if (newsButton && calendarButton) {
+            newsButton.style.width = '0';
+            newsButton.style.opacity = '0';
+            newsButton.style.padding = '0';
+            newsButton.style.margin = '0';
+            calendarButton.style.width = '0';
+            calendarButton.style.opacity = '0';
+            calendarButton.style.padding = '0';
+            calendarButton.style.margin = '0';
+            
+            dividers.forEach(divider => {
+                divider.style.width = '0';
+                divider.style.opacity = '0';
+                divider.style.margin = '0';
+            });
+
+            if (!isMobile) {
+                navButtons.style.padding = '21px 20px';
+                navButtons.style.backgroundColor = '#D70913a3';
+                navButtons.style.marginRight = '0';
+                navButtons.style.width = '120px';
+                navButtons.style.minHeight = '80px';
+                navButtons.style.display = 'flex';
+                navButtons.style.justifyContent = 'center';
+                navButtons.style.alignItems = 'center';
+                navButtons.style.position = 'fixed';
+                navButtons.style.top = '40px';
+                navButtons.style.right = '-10px';
+                navButtons.style.borderRadius = '0 0 0 15px';
+                navButtons.style.padding = '11px 10px';
+                navButtons.style.boxSizing = 'content-box';
+            } else {
+                navButtons.style.backgroundColor = 'transparent';
+                navButtons.style.position = 'relative';
+            }
+        }
+    }
+
+    // 處理導航欄滾動隱藏
+    if (bor1Bottom <= 0) {
+        if (currentScroll > lastScrollY) {
+            nav.style.transform = 'translateY(-100%)';
+            nav.style.opacity = '0';
+        } else if (bor1Bottom > -50) {
+            nav.style.transform = 'translateY(0)';
+            nav.style.opacity = '1';
+        }
+    } else {
+        nav.style.transform = 'translateY(0)';
+        nav.style.opacity = '1';
+    }
+
+    lastScrollY = currentScroll;
+}, { passive: true });
+
+  
+
+
+    // 貓頭鷹動畫
+// 貓頭鷹動畫控制器
+class OwlAnimationController {
+    constructor() {
+        this.owlContainer = document.querySelector("#owl-container");
+        this.logo = document.querySelector("#logo");
+        this.eyes = document.querySelectorAll('.eye');
+        this.gsapTimeline = gsap.timeline();
+        
+        this.initializeAnimations();
+        this.initializeEyeTracking();
+    }
+
+    // 初始化入場動畫
+    initializeAnimations() {
+        // 等待網頁載入完成後執行動畫
+        window.addEventListener('load', () => {
+            // 貓頭鷹飛入動畫
+            this.gsapTimeline
+                .fromTo(
+                    "#owl-container",
+                    {
+                        left: '-200px',
+                        rotation: -10,     // 初始旋轉角度
+                        scale: 0.9         // 初始尺寸略小
+                    },
+                    {
+                        left: '0px',
+                        rotation: 0,       // 回正
+                        scale: 1,          // 恢復原始大小
+                        duration: 3,
+                        ease: "elastic.out(1, 0.9)", // 回彈效果
+                        transformOrigin: "center center"
+                    }
+                )
+                // Logo 動畫
+                .fromTo(
+                    "#logo",
+                    {
+                        left: '-200px'
+                    },
+                    {
+                        left: '80px',
+                        duration: 3,
+                        ease: "elastic.out(1, 0.9)", // 回彈效果
+                    },
+                    "-=3" // 與貓頭鷹同時開始
+                );
+        });
+    }
+
+    // 初始化眼睛追蹤
+    initializeEyeTracking() {
+        // 眼睛跟隨滑鼠移動
+        document.addEventListener('mousemove', (event) => {
+            this.eyes.forEach(eye => {
+                const pupil = eye.querySelector('.pupil');
+                if (!pupil) return;
+
+                console.log(window.screen.width, window.screen.height);
+                console.log(event.clientX, event.clientY);
+                
+                // 使用原始的計算方式
+                let eyeCenterX = parseInt((event.clientX - window.screen.width / 2) / (window.screen.width / 2) * 17 - 50);
+                let eyeCenterY = parseInt((event.clientY - window.screen.height / 2) / (window.screen.height / 2) * 17 - 50);
+                
+                // 使用原始的transform方式
+                pupil.style.transform = `translate(calc(${eyeCenterX}%), calc(${eyeCenterY}%))`;
+            });
+        });
+    }
+
+    // 重置動畫
+    reset() {
+        this.gsapTimeline.clear();
+        if (this.owlContainer) {
+            gsap.set(this.owlContainer, { clearProps: "all" });
+        }
+        if (this.logo) {
+            gsap.set(this.logo, { clearProps: "all" });
+        }
+    }
+}
+
+// 初始化動畫控制器
+document.addEventListener('DOMContentLoaded', () => {
+    const owlController = new OwlAnimationController();
+});
+
+// 最新消息 行事曆右上角平滑滾動效果
+// 平滑滾動導航
+document.addEventListener('DOMContentLoaded', () => {
+    // 選擇導航按鈕
+    const newsButton = document.querySelector('.nav-button.news');
+    const calendarButton = document.querySelector('.nav-button.calendar');
+
+    // 點擊最新消息按鈕的處理
+    if (newsButton) {
+        newsButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const newsSection = document.querySelector('#news');
+            
+            if (newsSection) {
+                const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+                const targetPosition = newsSection.offsetTop - navHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+
+    // 點擊行事曆按鈕的處理
+    if (calendarButton) {
+        calendarButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            // 修改選擇器，明確指向行事曆區塊
+            const calendarSection = document.querySelector('.calendar-section');
+            
+            if (calendarSection) {
+                const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+                // 計算行事曆標題的位置
+                const calendarTitle = document.querySelector('.calendar-area-title');
+                const titleOffset = calendarTitle ? calendarTitle.offsetTop : 0;
+                
+                window.scrollTo({
+                    top: calendarSection.offsetTop + titleOffset - navHeight - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+
+    // 移除原有的 href="#calendar" 行為
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#calendar') {
+                e.preventDefault();
+            }
+        });
+    });
+});
+
+
+
+
+
+// 連結網頁
+document.querySelectorAll('.feature-content-wrapper').forEach(wrapper => {
+    wrapper.addEventListener('click', function() {
+        if(this.classList.contains('bilingual')) {
+            window.location.href = 'http://127.0.0.1:5500/%E5%B0%8F%E7%B5%84/FCU-11309-STES/Elementary%20school%20project/Xitun%20Elementary%20School/BilingualEducation.html';
+        } else if(this.classList.contains('gifted')) {
+            // 資優生頁面的連結
+            window.location.href = '資優生頁面的URL';
+        } else if(this.classList.contains('outstanding')) {
+            // 傑出表現頁面的連結
+            window.location.href = '傑出表現頁面的URL';
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    //行事曆
+const monthYear = document.getElementById("monthYear");
+const daysContainer = document.getElementById("days");
+const prevMonth = document.getElementById("prevMonth");
+const nextMonth = document.getElementById("nextMonth");
+const eventTitle = document.getElementById("eventTitle");
+const eventDescription = document.getElementById("eventDescription");
+
+// 活動資訊
+const events = {
+    "2025-01-13": [
+        { title: "運動會", description: "運動會熱血沸騰，齊心協力，每一步都展現活力，為榮耀全力以赴！" },
+        { title: "校慶", description: "校慶歡樂時光，全校師生齊聚一堂，共同回顧歷史，展望未來新篇章！" }
+    ],
+    "2025-01-26": [
+        { title: "園遊會", description: "集美食、遊戲與表演活動的歡樂盛會，適合朋友們一同參與。" }
+    ]
+};
+
+// 當前日期
+let currentDate = new Date();
+
+// 更新活動詳情
+function updateEventDetails(date) {
+    if (events[date]) {
+        eventTitle.textContent = date + " 的活動";
+        eventDescription.innerHTML = events[date].map(event => `
+            <div class="event">
+                <h4>${event.title}</h4>
+                <p>${event.description}</p>
+            </div>
+        `).join('');
+    } else {
+        eventTitle.textContent = "選擇日期以查看活動";
+        eventDescription.textContent = "暫無活動資訊";
+    }
+}
+
+// 更新月曆
+let selectedDayElement = null;
+
+function updateCalendar(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const firstDay = new Date(year, month, 1).getDay();
+    const lastDate = new Date(year, month + 1, 0).getDate();
+    const prevLastDate = new Date(year, month, 0).getDate();
+
+    monthYear.textContent = `${year}年 ${month + 1}月`;
+    daysContainer.innerHTML = "";
+
+    // 填充空白格（上月）
+    for (let i = firstDay - 1; i >= 0; i--) {
+        const prevDate = prevLastDate - i;
+        const fullDate = `${month === 0 ? year - 1 : year}-${month === 0 ? 12 : String(month).padStart(2, "0")}-${String(prevDate).padStart(2, "0")}`;
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("empty-day");
+        dayElement.innerHTML = `<div class="day-content">${prevDate}</div>`;
+        daysContainer.appendChild(dayElement);
+    }
+
+    // 填充當月日期
+    for (let day = 1; day <= lastDate; day++) {
+        const fullDate = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("day");
+        dayElement.innerHTML = `<div class="day-content">${day}</div>`;
+
+        // 如果有活動，添加事件類名
+        if (events[fullDate]) {
+            dayElement.classList.add("event");
+        }
+
+        dayElement.addEventListener("click", () => {
+            if (selectedDayElement) {
+                selectedDayElement.classList.remove("selected-day");
+            }
+            dayElement.classList.add("selected-day");
+            selectedDayElement = dayElement;
+            updateEventDetails(fullDate);
+        });
+
+        daysContainer.appendChild(dayElement);
+    }
+
+    // 填充空白格（下月）
+    const totalCells = daysContainer.children.length;
+    const remainingCells = 42 - totalCells;
+    for (let i = 1; i <= remainingCells; i++) {
+        const nextDate = i;
+        const fullDate = `${month === 11 ? year + 1 : year}-${month === 11 ? "01" : String(month + 2).padStart(2, "0")}-${String(nextDate).padStart(2, "0")}`;
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("empty-day");
+        dayElement.innerHTML = `<div class="day-content">${nextDate}</div>`;
+        daysContainer.appendChild(dayElement);
+    }
+}
+
+// 切換月份
+prevMonth.addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    updateCalendar(currentDate);
+});
+
+nextMonth.addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    updateCalendar(currentDate);
+});
+
+// 初始化
+updateCalendar(currentDate);
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    // 漢堡
+    document.addEventListener('DOMContentLoaded', () => {
+    // 獲取所需元素
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeBtn = document.querySelector('.close-btn');
+    const menu = document.getElementById('hamburger-menu');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const contentPanels = document.querySelectorAll('.content-panel');
+    let activeItem = null;
+
+    const adminMenuItem = document.querySelector('.menu-item[data-tab="6"] .highlight-bar');
+    const siteMapMenuItem = document.querySelector('.menu-item[data-tab="7"] .highlight-bar');
+    
+    // 隐藏高亮条
+    if (adminMenuItem) {
+        adminMenuItem.style.display = 'none';
+    }
+    if (siteMapMenuItem) {
+        siteMapMenuItem.style.display = 'none';
+    }
+    // 切換選單
+    function toggleMenu() {
+        const isOpen = menu.style.right === '0px';
+        
+        if (isOpen) {
+            menu.style.right = '-100%';
+            document.body.style.overflow = '';
+            
+            // 重置所有面板和選單項目
+            contentPanels.forEach(panel => {
+                panel.classList.remove('active');
+                panel.style.transform = 'translateX(30px)';
+                panel.style.opacity = '0';
+                panel.style.display = 'none';
+                panel.style.height = '0';
+                
+                // 確保面板回到原始位置
+                const panelParent = document.querySelector('.content-container');
+                if (panelParent && panel.parentElement !== panelParent) {
+                    panelParent.appendChild(panel);
+                }
+            });
+            
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                item.style.backgroundColor = '';
+                const text = item.querySelector('.menu-text');
+                if (text) text.style.color = 'white';
+            });
+            
+            activeItem = null;
+        } else {
+            menu.style.right = '0';
+            document.body.style.overflow = 'hidden';
+            
+            // 重新初始化第一個選項
+            if (window.innerWidth > 480) {
+                const firstItem = menuItems[0];
+                if (firstItem) {
+                    firstItem.click();
+                }
+            }
+        }
+    }
+
+    // 桌面版選單切換
+    function switchDesktopContent(item) {
+        const tabId = item.getAttribute('data-tab');
+        const isSpecialTab = tabId === '6' || tabId === '7';
+
+        // 重置所有面板
+        contentPanels.forEach(panel => {
+            panel.classList.remove('active');
+            panel.style.transform = 'translateX(30px)';
+            panel.style.opacity = '0';
+            panel.style.display = 'none';
+        });
+
+        // 重置所有選單項目
+        menuItems.forEach(menuItem => {
+            menuItem.classList.remove('active');
+            menuItem.style.backgroundColor = '';
+            const text = menuItem.querySelector('.menu-text');
+            if (text) text.style.color = 'white';
+        });
+
+        // 設置新的活動項目
+        item.classList.add('active');
+        item.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        const itemText = item.querySelector('.menu-text');
+        if (itemText) itemText.style.color = 'white';
+
+        if (isSpecialTab) return;
+
+        // 啟用對應的面板
+        const selectedPanel = document.getElementById(`content${tabId}`);
+        if (selectedPanel) {
+            selectedPanel.style.display = 'block';
+            selectedPanel.classList.add('active');
+
+            // 重新計算位置
+            const menuContainer = document.querySelector('.menu-container');
+            if (menuContainer) {
+                const containerRect = menuContainer.getBoundingClientRect();
+                const contentItems = selectedPanel.querySelectorAll('.content-item');
+                
+                contentItems.forEach((contentItem, index) => {
+                    const correspondingMenuItem = menuItems[index];
+                    if (correspondingMenuItem) {
+                        const menuRect = correspondingMenuItem.getBoundingClientRect();
+                        contentItem.style.position = 'absolute';
+                        contentItem.style.top = `${menuRect.top - containerRect.top}px`;
+                    }
+                });
+            }
+
+            // 動畫效果
+            requestAnimationFrame(() => {
+                selectedPanel.style.transform = 'translateX(0)';
+                selectedPanel.style.opacity = '1';
+            });
+        }
+
+        activeItem = item;
+    }
+
+    // 手機版選單切換
+    function switchMobileContent(item) {
+        const tabId = item.getAttribute('data-tab');
+        if (tabId === '6' || tabId === '7') return;
+
+        const panel = document.getElementById(`content${tabId}`);
+        if (!panel) return;
+
+        const isExpanded = item.classList.contains('active');
+
+        // 重置所有面板和選單項目
+        menuItems.forEach(menuItem => {
+            menuItem.classList.remove('active');
+            const otherPanel = document.getElementById(`content${menuItem.getAttribute('data-tab')}`);
+            if (otherPanel) {
+                otherPanel.style.display = 'none';
+                otherPanel.style.height = '0';
+                otherPanel.style.transform = 'none';
+                otherPanel.style.opacity = '1';
+                // 確保面板回到原始位置
+                const panelParent = document.querySelector('.content-container');
+                if (panelParent && otherPanel.parentElement !== panelParent) {
+                    panelParent.appendChild(otherPanel);
+                }
+            }
+        });
+
+        // 如果當前項目已經展開，則只做重置
+        if (isExpanded) {
+            return;
+        }
+
+        // 設置當前項目和面板的狀態
+        item.classList.add('active');
+        panel.style.display = 'block';
+        panel.style.height = 'auto';
+        
+        // 將面板插入到正確位置
+        const itemParent = item.parentNode;
+        if (itemParent) {
+            itemParent.insertBefore(panel, item.nextSibling);
+        }
+    }
+
+    // 事件監聽
+    hamburgerBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    
+    menu.addEventListener('click', (e) => {
+        if (e.target === menu) {
+            toggleMenu();
+        }
+    });
+
+    // 選單項目點擊
+    menuItems.forEach(item => {
+        const menuText = item.querySelector('.menu-text');
+
+        if (menuText) {
+            menuText.addEventListener('mouseenter', () => {
+                if (window.innerWidth > 480) {
+                    menuText.style.transform = 'translateX(10px)';
+                    menuText.style.color = '#FFEFCB';
+                }
+            });
+
+            menuText.addEventListener('mouseleave', () => {
+                if (window.innerWidth > 480) {
+                    menuText.style.transform = '';
+                    menuText.style.color = item === activeItem ? 'white' : 'white';
+                }
+            });
+        }
+
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (window.innerWidth <= 480) {
+                switchMobileContent(item);
+            } else {
+                switchDesktopContent(item);
+            }
+        });
+    });
+
+    // 視窗大小變化處理
+    window.addEventListener('resize', () => {
+        const contentContainer = document.querySelector('.content-container');
+        
+        if (window.innerWidth <= 480) {
+            // 重置所有狀態
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                const panel = document.getElementById(`content${item.getAttribute('data-tab')}`);
+                if (panel) {
+                    panel.style.display = 'none';
+                    panel.style.height = '0';
+                    // 確保面板回到原始位置
+                    if (contentContainer && panel.parentElement !== contentContainer) {
+                        contentContainer.appendChild(panel);
+                    }
+                }
+            });
+        } else {
+            // 桌面版初始化
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                const panel = document.getElementById(`content${item.getAttribute('data-tab')}`);
+                if (panel) {
+                    panel.style.display = 'none';
+                }
+            });
+            const firstItem = menuItems[0];
+            if (firstItem) firstItem.click();
+        }
+    });
+
+    // 初始化
+    if (window.innerWidth > 480) {
+        const firstItem = menuItems[0];
+        if (firstItem) firstItem.click();
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    // Go-top 按鈕控制
+    const goTopBtn = document.getElementById('goTop');
+    const rightImage = document.querySelector('.right-image');
+    const bor1 = document.querySelector('.bor');  // 選取城堡圖片元素
+
+    // 監聽滾動事件
+    window.addEventListener('scroll', () => {
+        const rightImageRect = rightImage.getBoundingClientRect();
+        const bor1Rect = bor1.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // 檢查是否在有效的顯示範圍內：
+        // 1. right-image 底部已進入視窗
+        // 2. 城堡圖片底部還沒離開視窗
+        if (rightImageRect.bottom <= windowHeight &&
+            bor1Rect.bottom > windowHeight) {
+            goTopBtn.classList.add('show');
+        } else {
+            goTopBtn.classList.remove('show');
+        }
+    });
+
+    // 點擊按鈕滾動到頂部
+    goTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+
+
+
+    // 球動畫
+    gsap.registerPlugin(ScrollTrigger);
+
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".school-info",
+            start: "top 5%",     // 改為螢幕中心開始
+            end: "bottom bottom",    // 延長到區塊底部
+            scrub: 1,               // 降低 scrub 值讓動畫更跟隨滾動
+            // markers: true,       // 需要調試時可以打開
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    tl.to("#ball", {
+        x: 735,
+        y: 400,
+        duration: 1,
+        ease: "none",    // 使用 none 來更好地跟隨滾動
+        zIndex: 5,
+    })
+        .to("#ball", {
+            x: 1100,
+            y: 750,
+            duration: 1,
+            ease: "none",
+            zIndex: 5,
+        })
+        .to("#ball", {
+            x: 150,
+            y: 1700,
+            duration: 1,
+            ease: "none",
+            zIndex: 5,
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // 輪播動畫
+// 輪播照片處理器
+class CarouselHandler {
+    constructor() {
+        this.photosGrid = document.querySelector('.photos-grid');
+        this.items = [
+            { image: "./img/輪播卡片1.png", description: "學校宣社區聯合運動會" },
+            { image: "./img/輪播卡片2.png", description: "家長關懷" },
+            { image: "./img/輪播卡片3.png", description: "國際躲避球競賽" },
+            { image: "./img/輪播卡片4.png", description: "最優選班級" },
+            { image: "./img/輪播照片5.png", description: "國際交換學生活動" }
+        ];
+        
+        this.animation = null;
+        this.isDown = false;
+        this.startX = null;
+        this.scrollLeft = null;
+        this.isMobile = window.innerWidth <= 480;
+    }
+
+    init() {
+        // 清理現有狀態
+        this.destroy();
+        
+        if (this.isMobile) {
+            this.initMobileView();
+        } else {
+            this.initDesktopView();
+        }
+
+        // 監聽視窗大小變化
+        window.removeEventListener('resize', this.handleResize);
+        window.addEventListener('resize', this.handleResize.bind(this));
+    }
+
+    initDesktopView() {
+        // 生成多組輪播內容
+        const allItems = [...this.items, ...this.items, ...this.items, ...this.items];
+        const content = allItems.map((item, index) => `
+            <div class="photo-card${index % 2 === 0 ? ' card-up' : ' card-down'}">
+                <div class="photo-container">
+                    <img src="${item.image}" alt="${item.description}" class="photo-img">
+                </div>
+                <p class="photo-description"><span>2024</span>&nbsp;${item.description}</p>
+            </div>
+        `).join('');
+
+        this.photosGrid.innerHTML = content;
+        
+        // 設置桌面版動畫
+        const cardWidth = document.querySelector('.photo-card').offsetWidth;
+        const gap = parseInt(window.getComputedStyle(this.photosGrid).gap);
+        const itemSetWidth = (cardWidth + gap) * this.items.length;
+
+        gsap.set(this.photosGrid, { x: -itemSetWidth });
+
+        this.animation = gsap.to(this.photosGrid, {
+            x: `-=${itemSetWidth}`,
+            duration: 20,
+            ease: "none",
+            repeat: -1,
+            onRepeat: () => {
+                gsap.set(this.photosGrid, { x: -itemSetWidth });
+            }
+        });
+
+        // 桌面版事件綁定
+        this.bindDesktopEvents(itemSetWidth);
+    }
+
+    initMobileView() {
+        // 生成移動版內容
+        const content = this.items.map(item => `
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="${item.image}" alt="${item.description}" class="photo-img">
+                </div>
+                <p class="photo-description"><span>2024</span>&nbsp;${item.description}</p>
+            </div>
+        `).join('');
+
+        this.photosGrid.innerHTML = content;
+
+        // 設置移動版樣式
+        this.photosGrid.style.cssText = `
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
+            cursor: grab;
+        `;
+
+        // 設置卡片樣式
+        const cards = this.photosGrid.querySelectorAll('.photo-card');
+        cards.forEach(card => {
+            card.style.cssText = `
+                flex: 0 0 280px;
+                scroll-snap-align: start;
+                transform: none !important;
+            `;
+        });
+
+        // 綁定移動版事件
+        this.bindMobileEvents();
+    }
+
+    bindDesktopEvents(itemSetWidth) {
+        this.photosGrid.addEventListener('mouseenter', () => {
+            if (this.animation) this.animation.pause();
+        });
+
+        this.photosGrid.addEventListener('mousemove', (e) => {
+            if (this.isDown) return;
+
+            const { x, totalWidth } = this.getRelativeMousePosition(e);
+            const triggerZone = totalWidth * 0.25;
+
+            if (this.animation) this.animation.kill();
+
+            // 根據滑鼠位置決定動畫方向
+            if (x < triggerZone) {
+                this.animation = this.createAnimation(itemSetWidth, '+');
+            } else if (x > totalWidth - triggerZone) {
+                this.animation = this.createAnimation(itemSetWidth, '-');
+            }
+        });
+
+        this.photosGrid.addEventListener('mouseleave', () => {
+            if (!this.isDown) {
+                if (this.animation) this.animation.kill();
+                this.animation = this.createAnimation(itemSetWidth, '-');
+            }
+        });
+
+        // 拖動功能
+        this.bindDragEvents(itemSetWidth);
+    }
+
+    bindMobileEvents() {
+    // 觸控事件
+    this.photosGrid.addEventListener('touchstart', (e) => {
+        this.startX = e.touches[0].clientX;
+        this.scrollLeft = this.photosGrid.scrollLeft;
+        this.photosGrid.style.cursor = 'grabbing';
+    });
+
+    this.photosGrid.addEventListener('touchmove', (e) => {
+        if (!this.startX) return;
+        e.preventDefault();
+        const x = e.touches[0].clientX;
+        const walk = (this.startX - x) * 1.5;
+        this.photosGrid.scrollLeft = this.scrollLeft + walk;
+    });
+
+    this.photosGrid.addEventListener('touchend', () => {
+        this.startX = null;
+        this.photosGrid.style.cursor = 'grab';
+    });
+
+    // 滑鼠事件
+    this.photosGrid.addEventListener('mousedown', (e) => {
+        this.isDown = true;
+        this.startX = e.pageX - this.photosGrid.offsetLeft;
+        this.scrollLeft = this.photosGrid.scrollLeft;
+        this.photosGrid.style.cursor = 'grabbing';
+    });
+
+    this.photosGrid.addEventListener('mousemove', (e) => {
+        if (!this.isDown) return;
+        e.preventDefault();
+        const x = e.pageX - this.photosGrid.offsetLeft;
+        const walk = (this.startX - x) * 2;
+        this.photosGrid.scrollLeft = this.scrollLeft + walk;
+    });
+
+    this.photosGrid.addEventListener('mouseup', () => {
+        this.isDown = false;
+        this.photosGrid.style.cursor = 'grab';
+    });
+
+    this.photosGrid.addEventListener('mouseleave', () => {
+        this.isDown = false;
+        this.photosGrid.style.cursor = 'grab';
+    });
+}
+
+    bindDragEvents(itemSetWidth) {
+        this.photosGrid.addEventListener('mousedown', (e) => {
+            this.isDown = true;
+            this.photosGrid.style.cursor = 'grabbing';
+            this.startX = e.pageX;
+            this.startScrollLeft = gsap.getProperty(this.photosGrid, "x");
+            if (this.animation) this.animation.kill();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!this.isDown) return;
+            e.preventDefault();
+
+            const x = e.pageX;
+            const walk = (x - this.startX);
+            let newX = this.startScrollLeft + walk;
+
+            if (newX > 0) {
+                newX = -itemSetWidth * 2 + (newX % itemSetWidth);
+            } else if (newX < -itemSetWidth * 3) {
+                newX = -itemSetWidth + ((newX + itemSetWidth * 3) % itemSetWidth);
+            }
+
+            gsap.set(this.photosGrid, { x: newX });
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (!this.isDown) return;
+            this.isDown = false;
+            this.photosGrid.style.cursor = 'grab';
+
+            this.animation = this.createAnimation(itemSetWidth, '-');
+        });
+    }
+
+    handleMouseDown(e) {
+        this.isDown = true;
+        this.startX = e.pageX - this.photosGrid.offsetLeft;
+        this.scrollLeft = this.photosGrid.scrollLeft;
+        this.photosGrid.style.cursor = 'grabbing';
+    }
+
+    handleMouseMove(e) {
+        if (!this.isDown) return;
+        e.preventDefault();
+        const x = e.pageX - this.photosGrid.offsetLeft;
+        const walk = (this.startX - x) * 2;
+        this.photosGrid.scrollLeft = this.scrollLeft + walk;
+    }
+
+    handleMouseUp() {
+        this.isDown = false;
+        this.photosGrid.style.cursor = 'grab';
+    }
+
+    handleMouseLeave() {
+        this.isDown = false;
+        this.photosGrid.style.cursor = 'grab';
+    }
+
+    handleTouchStart(e) {
+        this.startX = e.touches[0].pageX - this.photosGrid.offsetLeft;
+        this.scrollLeft = this.photosGrid.scrollLeft;
+    }
+
+    handleTouchMove(e) {
+        if (!this.startX) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - this.photosGrid.offsetLeft;
+        const walk = (this.startX - x) * 1.5;
+        this.photosGrid.scrollLeft = this.scrollLeft + walk;
+    }
+
+    handleTouchEnd() {
+        this.startX = null;
+    }
+
+    getRelativeMousePosition(e) {
+        const parentRect = this.photosGrid.parentElement.getBoundingClientRect();
+        return {
+            x: e.clientX - parentRect.left,
+            totalWidth: parentRect.width
+        };
+    }
+
+    createAnimation(itemSetWidth, direction) {
+        return gsap.to(this.photosGrid, {
+            x: `${direction}=${itemSetWidth}`,
+            duration: 20,
+            ease: "none",
+            repeat: -1,
+            onRepeat: () => {
+                gsap.set(this.photosGrid, { x: -itemSetWidth });
+            }
+        });
+    }
+
+    handleResize() {
+        const newIsMobile = window.innerWidth <= 480;
+        if (this.isMobile !== newIsMobile) {
+            this.isMobile = newIsMobile;
+            this.init();
+        }
+    }
+
+    destroy() {
+        // 清理動畫
+        if (this.animation) {
+            this.animation.kill();
+            this.animation = null;
+        }
+
+        // 清理事件監聽器
+        this.photosGrid?.replaceWith(this.photosGrid.cloneNode(true));
+        this.photosGrid = document.querySelector('.photos-grid');
+    }
+}
+
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = new CarouselHandler();
+    carousel.init();
+});
+
+// 影片區域處理器
+class VideoSectionHandler {
+    constructor() {
+        this.videoGrid = document.querySelector('.video-grid');
+        this.isMobile = window.innerWidth <= 480;
+        this.isDown = false;
+        this.startX = null;
+        this.scrollLeft = null;
+    }
+
+    init() {
+        if (this.isMobile) {
+            this.setupMobileView();
+        } else {
+            this.setupDesktopView();
+        }
+
+        // 監聽視窗大小變化
+        window.removeEventListener('resize', this.handleResize);
+        window.addEventListener('resize', this.handleResize.bind(this));
+    }
+
+    setupMobileView() {
+        // 設置移動版樣式
+        this.videoGrid.style.cssText = `
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 15px;
+            padding: 10px 20px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
+            cursor: grab;
+        `;
+
+        // 設置卡片樣式
+        const cards = this.videoGrid.querySelectorAll('.video-card');
+        cards.forEach(card => {
+            card.style.cssText = `
+                flex: 0 0 280px;
+                scroll-snap-align: start;
+                width: 280px;
+            `;
+        });
+
+        // 隱藏滾動條
+        const style = document.createElement('style');
+        style.textContent = `
+            .video-grid::-webkit-scrollbar {
+                display: none;
+            }
+        `;
+        document.head.appendChild(style);
+
+        this.bindMobileEvents();
+    }
+
+    setupDesktopView() {
+        // 重置為桌面版樣式
+        this.videoGrid.style = '';
+        const cards = this.videoGrid.querySelectorAll('.video-card');
+        cards.forEach(card => {
+            card.style = '';
+        });
+    }
+
+    bindMobileEvents() {
+        // 觸控事件
+        this.videoGrid.addEventListener('touchstart', this.handleTouchStart.bind(this));
+        this.videoGrid.addEventListener('touchmove', this.handleTouchMove.bind(this));
+        this.videoGrid.addEventListener('touchend', this.handleTouchEnd.bind(this));
+
+        // 滑鼠事件
+        this.videoGrid.addEventListener('mousedown', this.handleMouseDown.bind(this));
+        this.videoGrid.addEventListener('mousemove', this.handleMouseMove.bind(this));
+        this.videoGrid.addEventListener('mouseup', this.handleMouseUp.bind(this));
+        this.videoGrid.addEventListener('mouseleave', this.handleMouseUp.bind(this));
+    }
+
+    handleTouchStart(e) {
+        this.startX = e.touches[0].pageX - this.videoGrid.offsetLeft;
+        this.scrollLeft = this.videoGrid.scrollLeft;
+    }
+
+    handleTouchMove(e) {
+        if (!this.startX) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - this.videoGrid.offsetLeft;
+        const walk = (this.startX - x) * 1.5;
+        this.videoGrid.scrollLeft = this.scrollLeft + walk;
+    }
+
+    handleTouchEnd() {
+        this.startX = null;
+    }
+
+    handleMouseDown(e) {
+        this.isDown = true;
+        this.videoGrid.style.cursor = 'grabbing';
+        this.startX = e.pageX - this.videoGrid.offsetLeft;
+        this.scrollLeft = this.videoGrid.scrollLeft;
+    }
+
+    handleMouseMove(e) {
+        if (!this.isDown) return;
+        e.preventDefault();
+        const x = e.pageX - this.videoGrid.offsetLeft;
+        const walk = (this.startX - x) * 2;
+        this.videoGrid.scrollLeft = this.scrollLeft + walk;
+    }
+
+    handleMouseUp() {
+        this.isDown = false;
+        this.videoGrid.style.cursor = 'grab';
+    }
+
+    handleResize = () => {
+        const newIsMobile = window.innerWidth <= 480;
+        if (this.isMobile !== newIsMobile) {
+            this.isMobile = newIsMobile;
+            this.destroy();
+            this.init();
+        }
+    }
+
+    destroy() {
+        // 移除所有事件監聽器
+        this.videoGrid?.replaceWith(this.videoGrid.cloneNode(true));
+        this.videoGrid = document.querySelector('.video-grid');
+
+        // 清理樣式
+        const existingStyle = document.querySelector('style[data-video-grid]');
+        if (existingStyle) {
+            existingStyle.remove();
+        }
+    }
+}
+
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+    const videoSection = new VideoSectionHandler();
+    videoSection.init();
+});
+
+
+
+
+
+</script>
+
+</html>

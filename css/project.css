@@ -1,0 +1,3683 @@
+/* ==========================================================================
+   1. 基礎設置
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-family: "Noto Sans TC", serif;
+    max-width: 100vw;
+}
+
+/* 针对 Webkit 浏览器（Chrome、Safari 等）隐藏滚动条 */
+body {
+    /* font-family: Inter-Regular, sans-serif; */
+    background-color: #596260;
+    overflow-y: scroll;
+    scrollbar-width: none;    /* Firefox */
+    -ms-overflow-style: none;    /* IE and Edge */
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+/* ==========================================================================
+   2. 主要布局
+   ========================================================================== */
+.fixed-title {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.owl-container {
+    position: absolute;
+    top: 13.1%;
+    left: -500px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#first-owl {
+    width: 780px;
+    height: auto;
+}
+
+.eye {
+    position: absolute;
+    width: 10%;
+    height: 5.8%;
+    background-color: white;
+    /* opacity: 0.8; */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.eye.left {
+    top: 26.5%;
+    left: 33%;
+}
+
+.eye.right {
+    top: 31.2%;
+    left: 48.8%;
+}
+
+.pupil {
+    width: 60%;
+    height: 70%;
+    background-image: url('../img/pupil.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s linear;
+}
+
+/* ---貓頭鷹移入Css end--- */
+
+.upper-part {
+    width: 100vw;        /* 使用視窗寬度 */
+    min-width: 100vw;    /* 最小寬度也是視窗寬度 */
+    background-image: url('../img/背景(下).png');       
+    background-size: cover;  /* 背景圖片完整覆蓋 */
+    background-position: center;  /* 背景圖片置中 */
+    position: relative;
+    margin: 0;           /* 移除所有邊距 */
+    padding: 0;          /* 移除所有內距 */
+    min-height: 100vh;   /* 最小高度為視窗高度 */
+    padding-bottom: 300px;
+    border-radius: 0 0 100px 0;
+    left: 0;            /* 確保位置從最左開始 */
+    right: 0;           /* 確保延伸到最右邊 */
+    display: block;      /* 使用區塊顯示 */
+}
+.fixed-title {
+    position: fixed;
+    left: max(60px, 5%);
+    padding-left: 137px;
+    top: 25px;
+    color: #FFF;
+    font-size: 52px;
+    font-weight: 700;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    height: 136px;
+    padding: 32px 60px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+    z-index: 999;
+    margin: 10px auto 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* 添加過渡效果 */
+}
+
+.logo {
+    position: fixed;
+    left: max(60px, 5%);
+    top: 0;
+    width:  117px;
+    height: 136px;
+    aspect-ratio: 117/144;
+    z-index: 1000;
+}
+.logo img{
+    width:  117px;
+    height: 136px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    background-color: #D70913a3  ;
+    padding: 21px 60px 15px 20px;
+    margin-top: -51px;
+    margin-right: -60px;
+    border-radius: 0 0px 0 60px;
+    /* padding: 100px 0; */
+}
+
+.nav-button {
+    display: flex;
+    width:  180px;
+    height: 72px;
+    /* padding: 12px 0; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color: #FFF;
+    font-size: clamp(14px, 2vw, 32px);
+    font-weight: 700;
+    text-decoration: none;
+    /* padding: 20px 0; */
+    
+}
+
+
+
+.calendar {
+    background: rgba(183, 43, 47, 0.00); ;
+    margin-left: 10px;
+}
+
+.divider {
+    width:  34px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+}
+
+
+
+.nav-buttons .divider svg {
+    outline: none;
+    pointer-events: none;
+}
+
+.divider svg {
+    width: 3px;
+    height: 66px;
+}
+.divider svg path {
+    stroke: white;
+    stroke-width: 6;
+    stroke-linecap: round;
+}
+/* ==========================================================================
+   3. Banner區域
+   ========================================================================== */
+.banner-container {
+    width: 100%;
+    /* height: 650px; */
+    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    width: 100%;
+    height: 840px;
+    max-width: 1800px;
+    
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    /* padding-top: 30px; */
+    background-size: contain;
+    background-position: bottom;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ==========================================================================
+   4. 新聞區域
+   ========================================================================== */
+.news-section {
+    padding: 10px max(120px, 13%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.news-section h2 {
+    /* font-family: Inter; */
+    font-size: clamp(32px, 4vw, 52px);
+    padding: 20px 0;
+    margin-top: 100px;
+    margin-left: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.news-section h2 span {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: clamp(20px, 2vw, 32px);
+    margin-left: 10px;
+    
+}
+
+.arrow-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: currentColor;
+}
+
+.arrow-icon {
+    width: 42px;
+    height: 52px;
+    margin-top: 95px;
+    margin-right: 15px;
+    vertical-align: baseline;
+    position: relative;
+    top: 12px;
+    transition: all 0.3s ease; 
+}
+
+.arrow-icon:hover {
+    transform: scale(1.2) translateX(5px); /* 放大並向右位移 */
+    cursor: pointer; /* 滑鼠變成手指形狀 */
+}
+.news-section .arrow-icon {
+    vertical-align: baseline;
+    position: relative;
+    top: 8px;  /* 微調箭頭的垂直位置使其對齊文字 */
+    margin-left: auto;
+}
+
+.cn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px max(120px, 13%);    /* 使用與news-section相同的padding */
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.news-card {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #FFF;
+    border-radius: 20px;
+}
+.news-card:hover {
+    transform: scale(1.01)
+}
+
+.news-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.news-date {
+    font-size: clamp(18px, 2vw, 32px);
+    font-weight: 700;
+}
+.department{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.department-tag {
+    display: flex;
+    width: 172px;
+    height:  64px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #FF7E00;
+    color: #FFF;
+    font-size: clamp(18px, 2vw,32px);
+    /* font-weight: 700; */
+    padding: 5px 0;
+}
+
+.more-btn {
+    width: 120px;
+    height: 60px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.20);
+    background: #00B4A9;
+    color: #FFF;
+    font-size: clamp(18px, 2vw, 32px);
+    /* font-weight: 300; */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    align-items: center;
+}
+
+.news-content {
+    margin-top: 20px;
+    font-size: clamp(16px, 2vw, 32px);
+}
+
+/* ==========================================================================
+   5. 活動照片區域
+   ========================================================================== */
+   .events-photos-section {
+    height: auto;
+    padding: 10px max(180px, 12%);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px;
+}
+.events-photos-section h2{
+   font-weight: 700;
+   margin-left: 28px;
+   display: flex;
+    align-items: center;
+}
+
+.events-photos-title {
+    font-size: clamp(32px, 4vw, 52px);
+    margin: 100px 0 100px 30px;
+}
+.events-photos-title span {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: clamp(20px, 2vw, 32px);
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.photos-grid {
+    display: flex;
+    gap: clamp(40px, 4vw, 80px);
+    position: relative;
+    will-change: transform;
+    padding: 60px 0;
+    margin-left: 0;
+    width: max-content;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    margin-bottom: 150px;
+}
+
+.photos-grid:active {
+    cursor: grabbing;
+}
+.photo-card {
+    flex: 0 0 clamp(240px, 30vw, 480px);
+    background-color: #f1f1f1;
+    border-radius: 7%;
+    transition: transform 0.3s ease;
+}
+.card-up {
+    transform: translateY(-40px);
+}
+.card-down {
+    transform: translateY(40px);
+}
+/* Every even card moves down */
+.photo-card:nth-child(even) {
+    transform: translateY(40px);
+}
+
+/* Every odd card moves up */
+.photo-card:nth-child(odd) {
+    transform: translateY(-40px);
+}
+
+.photo-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 6/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.photo-img {
+    width: 93%;
+    height: 93%;
+    border-radius: 20px;
+    object-fit: cover;
+    
+}
+
+.year {
+    color: #8D6817;
+    font-size: clamp(20px, 2vw, 32px);
+    font-weight: 700;
+    position: absolute;
+    right: -20px;
+    top: 70px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.photo-description {
+    text-align: center;
+    font-size: clamp(16px, 2vw, 32px);
+    padding: 20px 0; /* 增加文字上下間距 */
+}
+
+.photo-description span {
+    color: #B72B2F;
+    font-weight: 700;
+}
+/* Hover效果 */
+.photo-card:hover {
+    transform: scale(1.05) translateY(0);
+    z-index: 1;
+}
+
+.photo-card.card-up:hover {
+    transform: scale(1.05) translateY(-40px);
+}
+
+.photo-card.card-down:hover {
+    transform: scale(1.05) translateY(40px);
+}
+/* ==========================================================================
+   6. 英雄區域
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    padding: 120px 40px;
+    margin-bottom: 0;    /* 确保没有底部间距 */
+}
+
+.left-image {
+    position: absolute;
+    left: -250px;
+    top: 80%;
+    transform: translateY(-50%) rotate(11.92deg);
+    width: 58%;
+    max-width: 1128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: translateX(10%);    /* 使用 transform 替代 margin */
+}
+
+.right-image {
+    position: absolute;
+    right: 0;
+    top: 360px;
+    transform: translateY(-50%) ;
+    width: 35%;
+    max-width: 662px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.right-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: translateY(-20%);    /* 使用 transform 替代 margin */
+}
+
+.vertical-text {
+    display: flex;
+    gap: 40px;
+    z-index: 1;
+    padding: 0 20px;
+    position: relative;
+    height: 600px;
+    justify-content: center; /* 添加水平置中 */
+    align-items: center; /* 添加垂直置中 */
+}
+
+.text-left {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: #FFF;
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    left: 50%; /* 從左邊50%開始 */
+    transform: translateX(-100%); /* 往左移動自身100% */
+    margin-top: 300px;
+}
+
+.text-right {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: #FFF;
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    left: 50%; /* 從左邊50%開始 */
+    transform: translateX(0); /* 保持在中心點 */
+   
+}
+
+   
+
+/* ==========================================================================
+   7. 學校資訊區域
+   ========================================================================== */
+.school-info {
+    padding: 40px 100px;
+    color: white;
+    padding-bottom: 40px;
+    position: relative;    /* 添加相對定位 */
+    z-index: 1;    /* 設定基礎層級 */
+}
+
+.school-info-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 80px;
+    padding-left: 100px;
+}
+
+.school-info-header h2 {
+    /* font-family: Inter; */
+    font-size: 52px;
+    font-weight: 700;
+    margin-left: 60px;
+}
+
+.school-info-header span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.feature-rows {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 80px;    /* Reduced from 120px to bring rows closer together */
+    padding: 0 40px 0;    /* Add padding to prevent content from touching edges */
+}
+
+.feature-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1589px;    /* Increased max-width to allow for wider spacing */
+    height: 100%;
+    max-height: 616px;
+    margin: 20px 30px 20px 0;    /* Center the content */
+}
+
+.feature-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 60px;    /* Increased from 80px for wider spacing between content and title */
+}
+
+.feature-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    pointer-events: none; /* 添加這行，確保圖片不會攔截點擊事件 */
+}
+
+.feature-title {
+    width: 90px;
+    height: 356px;
+    margin-left: 50px;
+    object-fit: contain;
+}
+
+.feature-mascot-wrapper {
+    width: 504px;
+    height: 500px;
+    aspect-ratio: 542/579;    /* 保持原始比例 */
+    position: relative;
+    margin: 0 40px;
+    
+}
+
+.feature-mascot {
+    width: 100%;
+    height: auto;    /* 讓高度自動調整 */
+    object-fit: cover;    /* 改為 cover 可以填滿容器 */
+    margin:110px 0 0 0;
+    
+}
+.feature-mascot-middle {
+    width: 100%;
+    height: auto;    /* 讓高度自動調整 */
+    object-fit: cover;    /* 改為 cover 可以填滿容器 */
+    margin:110px 0 0 80px;
+}
+
+/* 新增的feature-content Hover 效果樣式 */
+.feature-content-wrapper {
+    position: relative;
+    width: 880px;
+    height: 616px;
+    }
+
+
+.feature-content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 5%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.feature-content-wrapper::after {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 32px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 4;
+    width: 640px; /* 設定寬度為 880px - 120px * 2 = 640px */
+    text-align: center; /* 確保文字置中 */
+    cursor: pointer; 
+   
+}
+/* 雙語教育的特定文字 */
+.feature-content-wrapper.bilingual::after {
+    content: '西屯國小邁向國際，提供多元教育與雙語學習，培育具全球視野的未來人才。';
+}
+
+/* 資優生的特定文字 */
+.feature-content-wrapper.gifted::after {
+    content: '西屯國小致力於資優教育，透過多元課程與專業輔導，激發學生創意與潛能。';
+}
+
+/* 傑出表現的特定文字 */
+.feature-content-wrapper.outstanding::after {
+    content: '西屯國小學生在學術、藝術與體育等多元領域展現卓越表現，以創新思維，屢獲殊榮。';
+}
+
+/* Hover 效果觸發 */
+.feature-content-wrapper:hover::before,
+.feature-content-wrapper:hover::after {
+    opacity: 1;
+    pointer-events: none; 
+}
+
+
+
+.content-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.content-link img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.feature-content-wrapper .content-link {
+    position: relative;
+    z-index: 2;
+}
+/* ==========================================================================
+   影片區域
+   ========================================================================== */
+   .video-section {
+    display: flex;
+    width: 100%;
+    max-width: 1800px;
+    background-color: #FFFAEA;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    margin-left: auto;
+    padding: 80px 160px 80px 150px;
+    border-radius: 100px 0 0 100px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+}
+
+.video-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.video-title h2 {
+    font-size: 52px;
+    font-weight: 700;
+    
+}
+
+.video-title span {
+    
+    color: rgba(0, 0, 0, 0.50);
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+.arrow-icon-video {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 15px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+.video-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 11.46px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-description {
+    align-self: stretch;
+    color: #000;
+    text-align: center;
+    /* font-family: Inter; */
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-button svg {
+    width: 50px;
+    height: 50px;
+    fill: white;
+} */
+
+/* ==========================================================================
+   日曆區域
+   ========================================================================== */
+   .calendar-section {
+    position: relative;
+    width: 100vw;        /* 使用視窗寬度 */
+    min-width: 100vw;    /* 最小寬度也是視窗寬度 */
+    padding-top: 650px;
+    min-height: 2400px;
+    background-image: url('../img/背景(上).png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin: -820px 0 0 0;  /* 只保留上方負邊距，其他設為0 */
+    left: 0;              /* 確保位置從最左開始 */
+    right: 0;             /* 確保延伸到最右邊 */
+}
+.calendar-container{
+    margin-left: 100px;
+    justify-content: center;
+    
+}
+.branches-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 0px;
+}
+
+.branchesleft-area {
+    width: 400px;
+    height: 300px;
+}
+
+.illustration-right {
+    width: 200px;
+    margin-top: 270px;    
+    margin-right: -1380px;
+    position: relative; /* 添加相對定位 */
+}
+
+.illustration-right .hover {
+    opacity: 0;
+    /* 調整位置和角度，根據需求修改數值 */
+    transform: translate(10px, 17px) rotate(9deg); 
+}
+
+.illustration-right .owl-img {
+    width: 100%;
+    height: auto;
+    position: absolute; /* 絕對定位使圖片疊在一起 */
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease; /* 平滑過渡效果 */
+}
+
+/* 預設隱藏 hover 圖片 */
+.illustration-right .hover {
+    opacity: 0;
+}
+
+/* 滑鼠移入時顯示 hover 圖片並隱藏預設圖片 */
+.illustration-right:hover .hover {
+    opacity: 1;
+}
+
+.illustration-right:hover .default {
+    opacity: 0;
+}
+
+
+.branchesright-area {
+    width: 700px;
+    height: 300px;
+    margin-top: 250px;    /* 調整右邊樹枝往下的距離 */
+   margin-right: -140px;
+}
+
+.branchesleftbottom-area {
+    width: 500px;
+    height: 300px;
+    
+}
+
+#vignetteleft {
+    width: 400px;
+    height: 500px;
+    object-fit: contain;
+    margin-top: 70px;
+}
+#vignetteright-bottn{ 
+     width: 400px;
+    height: 500px;
+    object-fit: contain;
+    margin: -100px 0 0 1520px;
+}
+
+#vignette {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+#vignette-hover{
+    width: 88%;
+}
+
+#vignetteright {
+    width: 900px;
+    height: 400px;
+    object-fit: contain;
+    
+}
+
+/* 月曆區 */
+
+
+.calendar-area {
+    padding: 0px max(120px, 13%);
+}
+
+.vcalendar-area-title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+.calendar-area h2 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 100px;
+    font-weight: 700;
+    margin-left: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.calendar-area span {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+/* ----0108新版---- */
+.calendar-container {
+    width: 1200px;
+    height: auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+}
+
+/* 左側月曆 */
+.calendar-left {
+    width: 60%;
+    padding: 20px;
+    border-right: 1px solid #eee;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* 添加陰影 */
+    transition: box-shadow 0.3s ease;
+    /* 添加過渡效果 */
+}
+
+.calendar-header button:hover {
+    color: #f3ab43;
+    text-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* 懸停時增加陰影 */
+}
+
+.calendar-header span {
+    font-size: 32px;
+    color: #596260;
+}
+
+.calendar-main {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.day-header {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #888;
+}
+
+.days {
+    color: #596260;
+    font-weight: bold;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+
+.days div {
+    aspect-ratio: 1 / 1;
+    /* 正方形 */
+    /* background: #f9f9f9;
+    border-radius: 5px; */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 還沒點擊的樣子 */
+.day {
+    background: #f9f9f9;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+    position: relative;
+    aspect-ratio: 1 / 1;
+}
+
+
+/* 空白的日期 */
+.empty-day {
+    font-size: 32px;
+    color: #ccc;
+    background: #f9f9f9;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+    position: relative;
+    pointer-events: none;
+    /* 為絕對定位做準備 */
+}
+
+
+.selected-day {
+    background-color: #F5C6C7;
+    color: #596260;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-bottom: none !important; /* 移除選中時的底線 */
+}
+
+
+
+/* 還沒點擊的活動日 */
+.event {
+    color: #596260;
+    font-weight: bold;
+    border-bottom: 5px solid rgb(216, 111, 12);
+}
+
+.event-day span {
+    border-bottom: 2px solid red;
+    color: #596260;
+}
+
+
+
+/* 右側活動詳情 */
+.event-details {
+    font-size: 32px;
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* 垂直排列 */
+    /* justify-content: center; */
+    /* 垂直置中 */
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    /* margin-top:5px; */
+
+}
+
+/* 活動大標題 */
+.event-details h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+    margin: 22px 0 10px;
+}
+
+.event-details h4 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 40px;
+    /* 設置活動標題的字體顏色為黑色 */
+}
+
+.event-details p {
+    font-size: 18px;
+    color: #000;
+    margin: 20px 0;
+}
+
+#eventTitle{
+    margin-bottom: 33px;
+}
+
+
+
+.event-details .event {
+    height: 184px;
+    border-bottom: 1px solid #ccc;
+    /* 設置底線顏色 */
+    padding-bottom: 10px;
+    /* 設置內邊距 */
+    margin-bottom: 10px;
+    /* 設置外邊距 */
+}
+
+
+.day, .empty-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    position: relative;
+    background: #f9f9f9;
+    border-radius: 5px;
+    aspect-ratio: 1 / 1;
+}
+
+.day-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.empty-day {
+    color: #ccc;
+    pointer-events: none;
+}
+
+.selected-day .day-content {
+    background-color: #F5C6C7;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==========================================================================
+   防疫專區
+   ========================================================================== */
+    .epidemicprevention-area {
+    padding: 100px max(120px, 13%);
+    margin-top: -100px; 
+} 
+
+
+
+.epidemicprevention-container {
+    display: flex;
+    height: 200px;
+    width: 1520px;
+    /* padding: 0px; */
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    margin: 100px 0px 130px -50px;
+   
+}
+
+.epidemicprevention-item {
+    display: flex;
+    width: 480px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+}
+
+
+
+.epidemicprevention-img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;
+    overflow: hidden;
+    /* transition: all 0.6s ; */
+}
+
+.epidemicprevention-img img {
+    width: 480px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.6s ; 
+}
+
+.epidemicprevention-item img:hover {
+    transform: scale(1.65);
+    
+}
+
+.epidemicprevention-text {
+    color: #FFF;
+    /* font-family: Inter; */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.epidemicprevention-area {
+    padding: 10px max(120px, 13%);
+    
+}
+
+.epidemicprevention-area-title {
+    font-size: clamp(32px, 4vw, 52px);
+    padding: 20px 0;
+    margin-top: 100px;
+}
+.epidemicprevention-area h2 {
+    font-size: clamp(32px, 4vw, 52px);
+    padding: 20px 0;
+    margin-top: 100px;
+    font-weight: 700;
+    margin-left: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.epidemicprevention-area h2 span {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: clamp(20px, 2vw, 32px);
+    margin-left: 10px;
+}
+
+.bor {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   頁尾
+   ========================================================================== */
+.footer-top {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 60px 42px;
+    flex-direction: column;
+    gap: 78px;
+}
+
+.header-group {
+    display: flex;
+    align-items: center;
+}
+
+.school-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 17px;
+}
+
+.footer-logo {
+    width: clamp(80px, 8vw, 117px);
+    height: 136px;
+}
+
+.school-name {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.school-name h3 {
+    color: #FFF;
+    /* font-family: Inter; */
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.school-name p {
+    color: #FFF;
+    /* font-family: Inter; */
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.content-group {
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 20px;
+   
+}
+
+.nav-items {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-item {
+    display: flex;
+    /* width: 60px; */
+    height: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-item img {
+    width: 70px;
+    height: 70px;
+    
+}
+
+.nav-item span {
+    width: 130px;
+    height: 29px;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.school-address {
+    width: 40%;
+    min-width: 600px;
+    max-width: 900px;
+    color: #FFF;
+    /* font-family: Inter; */
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-bottom {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 0px 60px;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}
+
+.footer-link {
+    color: #FFF;
+    /* font-family: Inter; */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    color: #FFF;
+    /* font-family: Inter; */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* ==========================================================================
+   漢堡選單
+   ========================================================================== */
+   body.menu-open {
+    overflow: hidden;
+}
+   
+
+#hollow{
+    margin-top: 90px;
+}
+
+
+.hamburger {
+    display: flex;
+    width: clamp(50px, 6vw, 80px);
+    height: clamp(50px, 6vw, 80px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    font-size: 700;
+    /* 添加這兩行 */
+    z-index: 1000;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+.hamburger.active span:first-child {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:last-child {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* 漢堡選單 */
+.hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #596260;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.hamburger-menu nav {
+    position: relative;  
+    /* height: auto; */
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.hamburger-menu.active {
+    right: 0;
+}
+
+/* 內容區域 */
+.vertical-lines {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    height: calc(100vh - 290px);
+    pointer-events: none;
+}
+.vertical-line {
+    position: absolute;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 613px;
+    top: -15px;
+}
+.line-left {
+    left: 33.33%;
+    width: 3px;
+    background-color: white;
+}
+.line-right {
+    left: 66.66%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-text {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 500;
+    padding-left: 48px;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+}
+.hamburger-logo {
+    width: 117px;
+    height: 144px;
+    object-fit: contain;
+    margin: 0;
+}
+.close-btn {
+    color: white;
+    position: absolute;
+    right: 75px;
+    top: 35px;
+    /* margin-top: -15px; */
+}
+.close-btn-line {
+    color: white;
+    position: absolute;
+    right: 180px;
+    top: 25px;
+    margin: 0px 0 40px 65px;
+}
+.menu-item {
+    position: relative;
+    height: 67px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.menu-text:hover {
+    transform: translateX(10px);
+    color: #FFEFCB;
+}
+.highlight-bar {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #F3B95F;
+    display: none;
+}
+.menu-item.active .highlight-bar {
+    display: block;
+}
+.content-panel {
+    position: absolute;
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.content-panel.active {
+    display: flex;
+}
+.content-item {
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    padding-left: 48px;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+    width: 100%;
+}
+ .en {
+ 
+    font-weight: 500;
+}
+
+.content-item:hover {
+    transform: translateX(10px);
+    color: #FFEFCB;
+    
+}
+
+.hollow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 490px;
+    object-fit: contain;
+}
+
+/* Modified social icons styles */
+.social-icons {
+    position: absolute;
+    bottom: 110px;
+    left: 90px;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 48px;
+    width: calc(100% - 96px);
+}
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.social-item img {
+    width: 48px;
+    height: 48px;
+}
+.social-item span {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 900;
+}
+.menu-container {
+    padding-top: 30px;
+    
+}
+.content-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hamburger-menu nav .flex.items-start {
+    position: static;
+}
+/* ==========================================================================
+   漢堡條應式設計
+   ========================================================================== */
+   /* * 移動版樣式 * */
+   @media screen and (max-width: 480px) {
+       .hamburger {
+           display: flex;
+           width: 60px;
+           height: 80px;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           gap: 8px;
+           cursor: pointer;
+           background-color: transparent;
+           border: none;
+           padding: 15px;
+           z-index: 1000;
+           position: relative;
+       }
+   
+       .hamburger span {
+           display: block;
+           width: 100%;
+           height: 3px;
+           background-color: white;
+           border-radius: 3px;
+           transition: transform 0.3s, opacity 0.3s;
+       }
+   
+       /* 分隔線 */
+       .divider {
+           display: none;
+       }
+   
+       /* 漢堡選單展開樣式 */
+       .hamburger-menu {
+           position: fixed;
+           top: 0;
+           right: -100%;
+           width: 100%;
+           height: 100vh;
+           background-color: #596260;
+           transition: right 0.3s ease;
+           overflow-y: auto;
+           z-index: 9999;
+       }
+   
+       .hamburger-menu nav {
+           height: auto;
+           padding: 0;
+       }
+   
+       .hamburger-menu.active {
+           right: 0;
+       }
+   
+       /* Logo和關閉按鈕 */
+       .hamburger-logo {
+           width: 40px;
+           height: 40px;
+           margin: 10px;
+       }
+   
+       .close-btn {
+           position: absolute;
+           top: 20px;
+           right: 20px;
+           width: 20px;
+           height: 20px;
+       }
+   
+       .close-btn-line,
+       .vertical-lines,
+       .hollow {
+           display: none;
+       }
+   
+       /* 選單容器 */
+       .menu-container {
+           width: 100%;
+           padding-top: 0px;  /* 增加頂部間距 */
+       }
+   
+       .flex.justify-between {
+           flex-direction: column;
+       }
+   
+       .flex.justify-between > div[class*="w-1/3"] {
+           width: 100% !important;
+       }
+   
+       /* 選單項目 */
+       .menu-item {
+           width: 100%;
+           padding: 15px 20px;
+           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+           height: auto;  /* 移除固定高度 */
+           margin: 0;
+       }
+   
+       .menu-text {
+           font-size: 18px;
+           padding: 0;
+           width: 100%;
+           justify-content: space-between;  /* 在文字和箭頭之間添加空間 */
+           position: relative;  /* 為箭頭定位做準備 */
+       }
+   
+       /* 箭頭指示器 */
+       .menu-item::after {
+           content: '▼';
+           position: absolute;
+           right: 20px;
+           top: 50%;
+           transform: translateY(-50%);
+           font-size: 12px;
+           color: white;
+           transition: transform 0.3s ease;
+       }
+       .menu-item:not([data-tab="6"]):not([data-tab="7"])::after {
+           content: '▼';
+           position: absolute;
+           right: 20px;
+           top: 50%;
+           transform: translateY(-50%);
+           font-size: 12px;
+           color: white;
+           transition: transform 0.3s ease;
+       }
+       .menu-item.active:not([data-tab="6"]):not([data-tab="7"])::after {
+           transform: translateY(-50%) rotate(180deg);
+       }
+   
+       .menu-item.active::after {
+           transform: translateY(-50%) rotate(180deg);
+       }
+   
+       /* 內容面板 */
+       .content-panel {
+           position: static;  /* 改為靜態定位 */
+           width: 100%;
+           background: rgba(0, 0, 0, 0.1);
+           margin-top: 0;
+           transform: none;  /* 移除transform */
+           opacity: 1;
+           display: none;
+           margin-top: -24px;
+       }
+   
+       .content-panel.active {
+           display: block;
+       }
+   
+        .content-item {
+           position: relative;
+           left: auto;
+           padding: 12px 35px;
+           height: auto;
+           font-size: 16px;
+           border-top: 1px solid rgba(255, 255, 255, 0.05);
+       }
+   
+   
+       /* 針對行政專區和網站導覽移除箭頭 */
+       .menu-item[data-tab="6"]::after,
+       .menu-item[data-tab="7"]::after {
+           display: none;
+       }
+   
+       /* Banner區域 */
+       .upper-part {
+           border-radius: 0;
+           padding-bottom: 0;
+       }
+   
+       .banner-container {
+           padding: 0;
+       }
+       
+       .banner {
+           height: 360px;
+           border-radius: 0;
+           overflow: hidden;
+       }
+   
+       .owl-container {
+           display: none;
+       }
+   }
+/* ==========================================================================
+   go-top
+   ========================================================================== */
+   .go-top {
+    position: fixed;
+    right: 70px;
+    bottom: 150px;
+    display: flex;
+    width: 80px;
+    height: 76px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid #596260;
+    background: #FFF;
+    color: #596260;
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.go-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.go-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==========================================================================
+   其他響應式設計
+   ========================================================================== */
+
+@media screen and (max-width: 1700px) {
+
+    /* 信息区域 */
+    .school-info {
+        padding: 40px 80px;
+    }
+
+    .feature-content-wrapper {
+        width: 800px;
+        height: 560px;
+    }
+
+    .feature-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .feature-title {
+        width: 85px;
+        height: 336px;
+        margin-left: 40px;
+    }
+
+    .feature-mascot-wrapper {
+        width: 454px;
+        height: 450px;
+        margin: 0 30px;
+    }
+
+    /* 影片区域 */
+    .video-section {
+        
+        width: 90%;
+        max-width: 1600px;
+        gap: 40px;
+        margin: 0;
+        margin-left: auto;
+        padding: 80px 160px 80px 150px;
+        border-radius: 100px 0 0 100px;
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 2;
+        margin-top: 30px;
+    }
+
+    /* 日历区域 */
+    .calendar-container {
+        width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+/* 1440px Breakpoint */
+@media screen and (max-width: 1440px) {
+    .feature-content-wrapper {
+        width: 720px;
+        height: 506px;
+    }
+
+    .feature-mascot-wrapper {
+        width: 404px;
+        height: 400px;
+        margin: 0 20px;
+    }
+
+    /* 影片区域 */
+    .video-section {
+        width: 95%;
+        padding: 60px 80px;
+    }
+
+    .video-thumbnail {
+        height: 240px;
+    }
+
+    .video-grid {
+        gap: 25px;
+    }
+
+    /* 日历区域 */
+    .calendar-container {
+        width: 1000px;
+    }
+}
+
+/* Nav responsive styles */
+@media screen and (max-width: 1200px) {
+    .fixed-title{
+        margin-left: 50px;
+    }
+    
+    .nav-buttons {
+        background-color: transparent;
+        padding: 21px 20px 15px 20px;
+        margin-top: -51px;
+        margin-right: 0;
+    }
+    
+    .nav-button,.divider {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex !important;
+        margin-right: -20px;
+    }
+    
+    .fixed-title {
+        padding-left: 100px;
+        font-size: 42px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+    .owl-container{
+        display: none;
+    }
+}
+
+/* 1233px Breakpoint */
+@media screen and (max-width: 1233px) {
+    /* 信息区域 */
+    .school-info {
+        padding: 25px;
+    }
+
+    .school-info-header {
+        padding-left: 60px;
+        margin-bottom: 60px;
+    }
+
+    .school-info-header h2 {
+        font-size: 42px;
+        margin-left: 40px;
+    }
+
+    .feature-rows {
+        gap: 35px;
+        padding: 0 20px;
+    }
+
+    .feature-content-wrapper {
+        width: 520px;
+        height: 364px;
+    }
+
+    .feature-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .feature-title {
+        width: 60px;
+        height: 256px;
+        margin-left: 15px;
+    }
+
+    .feature-mascot-wrapper {
+        width: 300px;
+        height: 300px;
+        margin: 0 15px;
+    }
+
+    .feature-content-wrapper::after {
+        font-size: 22px;
+        width: 440px;
+    }
+
+    /* 影片区域 */
+    .video-section {
+        width: 95%;
+        padding: 40px 40px;
+    }
+
+    .video-title h2 {
+        font-size: 42px;
+    }
+
+    .video-grid {
+        gap: 20px;
+    }
+
+    .video-thumbnail {
+        height: 180px;
+    }
+
+    .video-description {
+        font-size: 22px;
+    }
+}
+
+/* 1057px Breakpoint */
+@media screen and (max-width: 1057px) {
+    /* 信息区域 */
+    .school-info {
+        padding: 20px;
+    }
+
+    .school-info-header {
+        padding-left: 40px;
+        margin-bottom: 50px;
+    }
+
+    .school-info-header h2 {
+        font-size: 38px;
+        margin-left: 30px;
+    }
+
+    .feature-rows {
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .feature-content-wrapper {
+        width: 480px;
+        height: 336px;
+    }
+
+    .feature-mascot-wrapper {
+        width: 280px;
+        height: 280px;
+        margin: 0 10px;
+    }
+
+    .feature-title {
+        width: 55px;
+        height: 236px;
+        margin-left: 10px;
+    }
+
+    .feature-content-wrapper::after {
+        font-size: 20px;
+        width: 400px;
+        bottom: 30px;
+    }
+
+    .feature-group {
+        margin: 15px 20px;
+    }
+
+    /* 影片区域 */
+    .video-section {
+        width: 92%;
+        padding: 35px 35px;
+    }
+
+    .video-title h2 {
+        font-size: 38px;
+    }
+
+    .video-title span {
+        font-size: 28px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .video-thumbnail {
+        height: 200px;
+    }
+
+    .video-description {
+        font-size: 20px;
+    }
+
+    /* 补充其他区域的响应式样式 */
+    .feature-main {
+        gap: 40px;
+    }
+}
+
+/* 1366px Breakpoint */
+@media screen and (max-width: 1366px) {
+    /* 信息区域 */
+    .feature-content-wrapper {
+        width: 680px;
+        height: 476px;
+    }
+
+    .feature-mascot-wrapper {
+        width: 384px;
+        height: 380px;
+    }
+
+    /* 影片区域 */
+    .video-section {
+        padding: 50px 60px;
+    }
+
+    .video-thumbnail {
+        height: 220px;
+    }
+
+    /* 日历区域 */
+    .calendar-container {
+        width: 900px;
+    }
+}
+
+/* 1280px Breakpoint */
+@media screen and (max-width: 1280px) {
+    
+    .school-info {
+        padding: 25px 30px 60px 30px; /* 增加底部padding */
+    }
+    /* 信息区域 */
+    .feature-content-wrapper {
+        width: 640px;
+        height: 448px;
+    }
+
+    .feature-mascot-wrapper {
+        width: 364px;
+        height: 360px;
+    }
+
+    /* 影片区域 */
+    .video-section {
+        padding: 40px 50px;
+        width: 100%;
+    }
+
+    .video-thumbnail {
+        height: 200px;
+    }
+
+    .video-description {
+        font-size: 24px;
+    }
+
+    /* 日历区域 */
+    .calendar-container {
+        width: 850px;
+    }
+    
+    /* 防疫专区 */
+    .epidemicprevention-container {
+        width: 1200px;
+        margin: 70px auto 90px auto;
+    }
+
+    .epidemicprevention-item {
+        width: 360px;
+    }
+
+    .epidemicprevention-img {
+        height: 170px;
+    }
+
+    .epidemicprevention-img img {
+        width: 360px;
+        height: 200px;
+    }
+
+    .epidemicprevention-text {
+        font-size: 22px;
+    }
+}
+
+/* 1280px Breakpoint */
+@media screen and (max-width: 1280px) {
+    /* 信息区修复 */
+    .school-info {
+        padding: 25px 30px 60px 30px; /* 增加底部padding */
+    }
+
+    .feature-rows {
+        margin-bottom: 40px;
+    }
+
+    /* 影片区域 */
+    .video-section {
+        width: 1100px;
+        padding: 50px 60px;
+    }
+
+    .video-thumbnail {
+        height: 200px;
+    }
+
+    /* 防疫专区 */
+    .epidemicprevention-container {
+        width: 1000px;
+        margin: 60px auto 80px auto;
+    }
+
+    .epidemicprevention-item {
+        width: 300px;
+    }
+
+    .epidemicprevention-img {
+        height: 150px;
+    }
+
+    .epidemicprevention-img img {
+        width: 300px;
+        height: 180px;
+    }
+
+    .epidemicprevention-text {
+        font-size: 20px;
+    }
+}
+
+/* 1180px Breakpoint */
+@media screen and (max-width: 1180px) {
+    /* 信息区域 */
+    .school-info {
+        padding: 30px;
+    }
+
+    .feature-rows {
+        gap: 40px;
+    }
+
+    .feature-content-wrapper {
+        width: 560px;
+        height: 392px;
+    }
+
+    .feature-mascot-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+
+    .feature-title {
+        width: 65px;
+        height: 276px;
+        margin-left: 20px;
+    }
+
+    .feature-content-wrapper::after {
+        font-size: 24px;
+        width: 480px;
+    }
+
+    /* 影片区域 */
+    .video-section {
+        padding: 40px 30px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .video-thumbnail {
+        height: 240px;
+    }
+
+    /* 日历区域 */
+    .calendar-container {
+        width: 800px;
+    }
+
+    .calendar-area {
+        padding: 0 20px;
+    }
+}
+
+/* 768px Breakpoint */
+@media screen and (max-width: 768px) {
+
+    
+
+    /* 信息区域 */
+    .feature-content-wrapper {
+        width: 500px;
+        height: 350px;
+    }
+
+    .feature-mascot-wrapper {
+        display: none;
+    }
+
+    /* 影片区域 */
+    .video-section {
+        padding: 30px 20px;
+        border-radius: 50px 0 0 50px;
+    }
+
+    .video-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 15px 0;
+        grid-template-columns: none;
+    }
+
+    .video-card {
+        flex: 0 0 280px;
+        width: 280px;
+    }
+
+    .video-thumbnail {
+        height: 180px;
+    }
+
+    /* 日历区域 */
+    .calendar-container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .calendar-left {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .event-details {
+        width: 100%;
+    }
+}
+
+/* 球动画控制 */
+@media screen and (max-width: 1900px) {
+    #ball {
+        display: none;
+    }
+ #vignette{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1901px) {
+    #ball {
+        display: block;
+    }
+  } 
+
+/* 通用日历置中样式 */
+.calendar-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-container {
+    margin: 0 auto;
+}
+   
+   
+   
+   
+ @media screen and (max-width: 480px) {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 80px;
+        padding: 0px;
+        gap: 0px;
+        z-index: 999;
+        margin: 0 ;
+    }
+    
+    .fixed-title {
+        display: none;
+    }
+    .nav-button {
+        display: none;
+    }
+    .logo {
+        position: fixed;
+        left: 5%;
+        top: 0;
+        width:  65px;
+        height: 80px;
+        aspect-ratio: 117/144;
+        z-index: 1000;
+    }
+    .logo img{
+        width:  65px;
+        height: 80px;
+        margin-left: -60px;
+    }
+
+    .nav-buttons {
+        background-color:transparent  ;
+        padding: 0px ;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    .upper-part {
+        border-radius: 0px;
+        padding-bottom: 0px;
+    }
+
+    
+    .banner-container {
+        padding: 0px;
+    }
+    
+    .banner {
+        height: 360px;
+        border-radius: 0;
+        overflow: hidden;
+    }
+    .hamburger {
+        display: flex;
+        width: 60px;
+        height: 80px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 15px;
+        font-size: 700;
+        z-index: 1000;
+        position: relative;
+        margin-right: 10px;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+    .divider {
+       display: none;
+    }
+    .owl-container {
+        display: none;
+    }
+    .news-section {
+        display: flex; /* Change from 'none' to 'flex' */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    
+    .news-section h2 {
+        flex-direction: column;
+        font-size: 24px;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .news-section h2 span {
+        font-size: 20px;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .arrow-link {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+
+    .arrow-icon {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;    /* 使用與news-section相同的padding */
+        margin: 0 ;
+    }
+    .news-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        padding-bottom: 45px; /* 為標籤騰出空間 */
+    }
+
+    .news-card {
+        width: 90%;
+        padding: 15px;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+    .news-date {
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+
+    .department {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    .department-tag {
+        width: 100px;
+        height: 32px;
+        font-size: 14px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .more-btn {
+        width: 80px;
+        height: 32px;
+        font-size: 14px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .news-content {
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+  /* 2. 活動照片輪播區手動滾動 */
+  .photos-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 20px;
+    width: auto;
+    margin: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+.photos-grid::-webkit-scrollbar {
+    display: none;
+}
+
+
+.photo-card {
+    flex: 0 0 280px;
+    width: 280px;
+    scroll-snap-align: start;
+    transform: none !important;
+    margin: 0;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.photo-card:nth-child(even),
+.photo-card:nth-child(odd) {
+    transform: none !important;
+}
+
+.photo-container {
+    width: 100%;
+    height: 180px;
+    margin: 0;
+    padding: 10px;
+}
+
+.photo-description {
+    font-size: 14px;
+    padding: 10px 15px;
+    margin: 0;
+}
+.photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo-card:nth-child(odd),
+.photo-card:nth-child(even) {
+    transform: none !important;
+}
+
+.photo-card:hover {
+    transform: none !important;
+}
+.photos-grid {
+    cursor: grab;
+    touch-action: pan-x;
+}
+
+.photos-grid:active {
+    cursor: grabbing;
+}
+    .events-photos-section {
+        height: 550px;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .events-photos-section h2{
+        flex-direction: column;
+        margin:40px 0;
+        
+    }
+    
+    .events-photos-title {
+        font-size:  24px;
+       
+        
+    }
+    .events-photos-title span {
+        color: rgba(0, 0, 0, 0.50);
+        font-size:  20px;
+        font-weight: 700;
+        margin-left: 0px;
+    }
+
+    .hero-section {
+        width: 100%;
+        margin-top: -300px;
+        min-height: 500px;
+        padding-bottom: 200px;
+        margin-bottom: 0px;   
+
+}
+.vertical-text {
+    height: 300px;
+}
+
+.text-left,
+.text-right {
+    font-size: 32px;
+}
+
+.text-right {
+    margin-top: 80px; /* 調整在手機版的垂直位置 */
+}
+
+
+.left-image {
+    position: absolute;
+    left: -60px;
+    top: 80%;
+    transform: translateY(-50%) rotate(11.92deg);
+    width: 50%;
+    max-width: 1128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.school-info {
+    padding: 0px;  /* 添加相對定位 */
+    z-index: 1;    /* 設定基礎層級 */
+}
+
+.school-info-header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 10px;
+}
+
+.school-info-header h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.school-info-header span {
+    font-size: 20px;
+}
+.feature-mascot, .feature-mascot-middle, #ball {
+    display: none;
+}
+
+.feature-rows {
+   align-items: center;
+   justify-content: center;
+    gap: 0px;    /* Reduced from 120px to bring rows closer together */
+    padding:  0;    /* Add padding to prevent content from touching edges */
+}
+
+.feature-group {
+    justify-content:start;
+    width: auto;
+    max-width: 1589px;    /* Increased max-width to allow for wider spacing */
+    height: 100%;
+    max-height: 616px;
+    margin:  0;    /* Center the content */
+}
+
+.feature-title , .feature-title-middle {
+    display: none;
+}
+
+.feature-mascot-wrapper {
+    display: none;
+}
+
+.feature-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.feature-content {
+    width: 320px;
+    height: 240px;
+    border-radius: 20px;
+    
+    
+}
+
+.feature-content-wrapper {
+    position: relative;
+    width: 320px;
+    height: 240px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 5%, transparent 60%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.feature-content-wrapper::after {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 4;
+    width: 280px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+/* 各種類型的特定文字 */
+.feature-content-wrapper.bilingual::after {
+    content: '雙語教育';
+}
+
+.feature-content-wrapper.gifted::after {
+    content: '資優生資訊';
+}
+
+.feature-content-wrapper.outstanding::after {
+    content: '傑出表現';
+}
+
+/* Hover 效果 */
+.feature-content-wrapper:hover::before,
+.feature-content-wrapper:hover::after {
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* 連結樣式 */
+.content-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.content-link img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.feature-content-wrapper .content-link {
+    position: relative;
+    z-index: 2;
+}
+
+
+.video-section {
+    padding: 20px;
+    width: 100%;
+    border-radius: 0;
+}
+
+.video-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 10px 0;
+    width: 100%;
+}
+.video-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.video-section svg{
+    display: none;
+}
+
+.video-title {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-title h2 {
+    font-size: 24px;
+}
+
+.video-title span {
+    font-size: 20px;
+}
+.video-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+}
+.video-thumbnail {
+    width: 100%;
+    height: 160px;  /* 固定高度 */
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-description {
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+
+
+
+.calendar-section {
+    position: relative;
+    width: 100vw;
+    min-width: 100vw;
+    padding-top: 400px;  /* 減少上方 padding */
+    min-height: 1800px;  /* 減少最小高度 */
+    background-image: url('../img/背景(上).png');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin: -350px 0 0 0;  /* 調整上方負邊距 */
+    left: 0;
+    right: 0;
+}
+
+
+
+.video-description {
+    align-self: stretch;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+}
+.video-card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.video-card:active {
+    cursor: grabbing;
+}
+
+.branches-container{
+    display: none;
+}
+
+.vcalendar-area-title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+/* 隱藏滾動條但保持功能 */
+.photos-grid::-webkit-scrollbar,
+.video-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.photos-grid,
+.video-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.calendar-area h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.calendar-area span {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.calendar-area {
+    padding: 20px;
+}
+.calendar-container {
+    width: 335px;  /* 適合 375px 螢幕的寬度 */
+    margin: 0 auto;  /* 置中對齊 */
+    flex-direction: column;  /* 改為垂直排列 */
+}
+.calendar-left {
+    width: 100%;  /* 讓月曆占滿容器寬度 */
+    padding: 10px;
+    border-right: none;
+    border-bottom: 1px solid #eee;  /* 改為底部分隔線 */
+}
+.calendar-header {
+    padding: 10px 0;
+}
+
+.calendar-header span {
+    font-size: 24px;  /* 調整月份字體大小 */
+}
+
+.day-header {
+    font-size: 14px;  /* 調整星期字體大小 */
+    padding: 3px 0;
+}
+
+.day, .empty-day {
+    aspect-ratio: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 0;
+    height: auto; /* 移除固定高度 */
+}
+
+/* 右側活動詳情 */
+.event-details {
+    width: 100%;
+    padding: 10px 15px;  /* 調整左右內邊距 */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;  /* 讓子元素寬度填滿容器 */
+}
+
+.event-details h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    width: 100%;  /* 確保標題寬度填滿 */
+    text-align: left;  /* 文字靠左對齊 */
+}
+
+.event-details h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left;  /* 文字靠左對齊 */
+    width: 100%;  /* 確保副標題寬度填滿 */
+}
+
+.event-details p {
+    font-size: 14px;
+    text-align: left;  /* 文字靠左對齊 */
+    width: 100%;  /* 確保內容寬度填滿 */
+    line-height: 1.4;  /* 調整行高 */
+    margin: 5px 0;
+}
+
+
+/* 選中日期的樣式 */
+.selected-day {
+    background: transparent;
+}
+.day-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.selected-day .day-content {
+    background-color: #F5C6C7;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.day.event {
+    position: relative;
+}
+
+.event-details .event {
+    width: 100%;  /* 確保事件區塊寬度填滿 */
+    padding: 10px;  /* 加入內邊距 */
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+/* 保持日曆容器的其他樣式不變，只調整內部格子的排列 */
+.calendar-main {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+
+
+
+
+.go-top{
+    display: none;
+}
+.branchesleftbottom-area{
+    display: none;
+}
+
+
+.epidemicprevention-area {
+    padding: 0;
+    margin-top: 30px; 
+} 
+
+.epidemicprevention-area-title {
+     padding: 0;
+    margin-top:0;
+}
+.epidemicprevention-area h2 {
+    font-size: 24px;
+    padding: 0;
+    margin-top: 0px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.epidemicprevention-area h2 span {
+    font-size: 20px;
+    margin-left: 0px;
+    width: 260px;
+}
+.epidemicprevention-container {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+
+}
+
+.epidemicprevention-img {
+    width: 320px;
+    height: 120px;
+}
+
+.header-group {
+    flex-direction: column;
+}
+
+.footer-top {
+    padding: 30px 20px 0 20px;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.school-title {
+    margin: 0;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-logo {
+    width: 80px;
+    height: auto;
+    margin: 0;
+}
+
+.school-name {
+    text-align: center;
+    width: 100%;
+}
+
+.school-name h3 {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+
+.school-name p {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.nav-items {
+    display: flex;
+    gap: 5px;
+    padding: 0 20px;
+}
+
+.nav-item {
+    height: auto;
+}
+
+.nav-item img {
+    width: 32px;    /* 縮小圖標尺寸 */
+    height: 32px;   /* 縮小圖標尺寸 */
+}
+
+.nav-item span {
+    font-size: 10px;  /* 稍微縮小文字 */
+    width: auto;
+    height: auto;
+}
+.school-address {
+    min-width: unset;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    padding: 15px 20px;
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-right {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-link {
+    font-size: 14px;
+}
+
+.content-group {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 20px;
+}
+
+
+/* 社群圖標新的樣式 */
+.footer-top:after {
+    content: '';
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer-bottom {
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-left {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.footer-right {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.footer-link, .footer-right span {
+    font-size: 12px;
+}
+
+
+
+
+
+
+.mobile-nav__hamburger {
+    display: flex;
+    width: 60px;
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    z-index: 1000;
+    position: relative;
+}
+
+.mobile-nav__hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* 選單容器 */
+.mobile-nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #596260;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.mobile-nav__menu.is-active {
+    right: 0;
+}
+
+/* 頂部區域 */
+.mobile-nav__header {
+    position: relative;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.mobile-nav__logo {
+    width: 65px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0;
+}
+
+.mobile-nav__close-line {
+    position: absolute;
+    right: 180px;
+    top: 30px;
+    margin: 20px 0 40px 65px;
+}
+
+.mobile-nav__close {
+    position: absolute;
+    right: 70px;
+    top: 65px;
+}
+
+/* 垂直分隔線 */
+.mobile-nav__dividers {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    height: calc(100vh - 290px);
+    pointer-events: none;
+}
+
+.mobile-nav__divider {
+    position: absolute;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 613px;
+    top: 0;
+}
+
+.mobile-nav__divider--left {
+    left: 33.33%;
+    width: 3px;
+    background-color: white;
+}
+
+.mobile-nav__divider--right {
+    left: 66.66%;
+    width: 1px;
+}
+
+/* 選單內容 */
+.mobile-nav__content {
+    padding-top: 30px;
+}
+
+.mobile-nav__item {
+    position: relative;
+    height: 67px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-nav__text {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 500;
+    padding-left: 48px;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+}
+
+.mobile-nav__text:hover {
+    transform: translateX(10px);
+    color: #FFEFCB;
+}
+
+.mobile-nav__highlight {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #F3B95F;
+    display: none;
+}
+
+.mobile-nav__item.is-active .mobile-nav__highlight {
+    display: block;
+}
+
+/* 內容面板 */
+.mobile-nav__panel {
+    position: absolute;
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.mobile-nav__panel.is-active {
+    display: flex;
+}
+
+.mobile-nav__panel-item {
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    padding-left: 48px;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+    width: 100%;
+}
+
+.mobile-nav__panel-item:hover {
+    transform: translateX(10px);
+    color: #FFEFCB;
+}
+
+/* 貓頭鷹圖片 */
+.mobile-nav__owl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 490px;
+    object-fit: contain;
+    margin-top: 90px;
+}
+}
+   
+/* ==========================================================================
+   動畫
+   ========================================================================== */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

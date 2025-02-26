@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>School-profile</title>
+    <link rel="stylesheet" href="./css/schoolprofile.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="nav">
+        <a href="./index.html">
+            <div class="logo" id="logo">
+                <img src="./img/西屯國小校徽.png" alt="西屯國小校徽">
+            </div>
+        </a>
+        <div class="nav-buttons">
+            <!-- <a href="#news" class="nav-button news">最新消息</a>
+            <a href="#calendar" class="nav-button calendar">行事曆</a> -->
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 漢堡條 -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="relative h-screen">
+            <nav>
+                <img src="./img/l.png" alt="" class="close-btn-line">
+                <img src="./img/X.png" alt="" class="close-btn">
+
+                <div class="flex items-start">
+                    <a href="./index.html">
+                        <img src="./img/西屯國小校徽.png" alt="校徽" class="hamburger-logo">
+                    </a>
+                </div>
+            </nav>
+            <div class="vertical-lines">
+                <div class="vertical-line line-left"></div>
+                <div class="vertical-line line-right"></div>
+            </div>
+
+            <div class="flex justify-between w-full h-[calc(100vh-130px)]">
+                <div class="relative flex items-end w-1/3">
+                    <img src="./img/漢堡條貓頭鷹.png" alt="" class="hollow" id="hollow">
+                    <!-- <div class="social-icons">
+                    <div class="social-item">
+                        <img src="./img/西屯校友會.svg" alt="西屯校友會">
+                        <span>西屯校友會</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="./img/故事爸媽成長團.svg" alt="故事爸媽成長團">
+                        <span>故事爸媽成長團</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="./img/西屯粉絲團.svg" alt="西屯粉絲團">
+                        <span>西屯粉絲團</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="./img/youtube.svg" alt="校園影片頻道">
+                        <span>校園影片頻道</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="./img/校刊西屯兒童.svg" alt="校刊西屯兒童">
+                        <span>校刊西屯兒童</span>
+                    </div>
+                </div> -->
+                </div>
+
+                <div class="w-1/3">
+                    <div class="menu-container">
+                        <div class="flex flex-col gap-6">
+                            <div class="menu-item" data-tab="1">
+                                <div class="menu-text">關於西屯</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="2">
+                                <div class="menu-text">教師專區</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="3">
+                                <div class="menu-text">家長與學生專區</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="4">
+                                <div class="menu-text">西屯主題成果網站</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="5">
+                                <div class="menu-text">校務資料</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="6">
+                                <div class="menu-text">行政專區</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                            <div class="menu-item" data-tab="7">
+                                <div class="menu-text">網站導覽</div>
+                                <div class="highlight-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/3">
+                    <div class="content-container">
+                        <!-- Content panels remain the same -->
+                        <div id="content1" class="content-panel">
+                            <a href="https://www.tc.edu.tw/page/d61c396e-63a3-4286-ac38-9874ac4092fe/school-content?id=714"
+                                class="content-item">學校概況</a>
+                            <a href="./history.html" class="content-item">西屯歷史</a>
+                            <a href="./location.html" class="content-item">交通位置</a>
+                            <a href="./vision.html" class="content-item">西屯願景</a>
+                            <a href="./schoolMap.html" class="content-item">校園平面圖</a>
+                            <a href="./schoolprofile.html" class="content-item en">School Profile</a>
+                        </div>
+
+                        <div id="content2" class="content-panel">
+                            <div class="content-item">校內雲端(限校內使用)</div>
+                            <a href="https://pemis.taichung.gov.tw/login.aspx" class="content-item">台中市教育單位查勤系統</a>
+                            <a href="https://school.tc.edu.tw/application/index/" class="content-item">雲端校務系統</a>
+                            <a href="https://www.inservice.edu.tw/" class="content-item">教師研習系統</a>
+                            <a href="https://www.sso.edu.tw/" class="content-item">教育體系單一簽入服務</a>
+                        </div>
+
+                        <div id="content3" class="content-panel">
+                            <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hd=st.tc.edu.tw&osid=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1206794255%3A1737427993163563&ddm=1"
+                                class="content-item">GSuite帳號登入</a>
+                            <a href="https://adl.edu.tw/HomePage/home/" class="content-item">因材網&學習拍</a>
+                            <a href="https://www.pagamo.org/" class="content-item">PaGamO</a>
+                            <a href="https://www.junyiacademy.org/" class="content-item">均一教育平台</a>
+                            <a href="https://fatraceschool.k12ea.gov.tw/frontend/search.html?school=193621"
+                                class="content-item">今日菜單</a>
+                        </div>
+
+                        <div id="content4" class="content-panel">
+                            <a href="https://class.tn.edu.tw/modules/tad_web/index.php?WebID=10219"
+                                class="content-item">閱來閱愛你</a>
+                            <a href="https://class.tn.edu.tw/modules/tad_web/index.php?WebID=14838"
+                                class="content-item">西屯愛鄉土</a>
+                            <a href="https://read.moe.edu.tw/193621/library" class="content-item">西屯國小圖書館</a>
+                        </div>
+
+                        <div id="content5" class="content-panel">
+                            <div class="content-item">課程發展</div>
+                            <div class="content-item">校園規範</div>
+                            <div class="content-item">校務公開資料</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 中間內容區 -->
+    <div class="mid-part">
+        <div class="top">
+            <div class="route">
+                <a href="./index.html">首頁</a>
+                &nbsp;
+                <i class="fa-solid fa-angle-right"></i>
+                &nbsp;
+                關於西屯
+                &nbsp;
+                <i class="fa-solid fa-angle-right"></i>
+                &nbsp;
+                School Profile
+            </div>
+            <div class="title">School Profile</div>
+        </div>
+
+        <div class="section-title" id="section-title">
+            <h2>School Picture</h2>
+        </div>
+
+
+        <!-- 主照片 -->
+        <div class="main-image">
+            <img src="./img/schoolprofile.png" alt="">
+        </div>
+
+        <div class="section-title" id="section-title">
+            <h2>School Information</h2>
+        </div>
+
+        <div class="main-content">
+            <div class="school-info">
+                <div class="school-info-title">School Name</div>
+                <div class="school-info-content">Situn Elementary School/ Taiwan Taichung</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Location</div>
+                <div class="school-info-content">40749 Taichung (Taiwan)</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Postal Address</div>
+                <div class="school-info-content">Situn Elementary School/ Taiwan Taichung</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Website</div>
+                <div class="school-info-content">https://stes.tc.edu.tw/</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Name of principal</div>
+                <div class="school-info-content">Alex Peng</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Type of school</div>
+                <div class="school-info-content">Elementary School and Kindergarten</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Affiliation</div>
+                <div class="school-info-content">Public</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Student Grade Levels</div>
+                <div class="school-info-content">
+                    <div class="juxtapose">Elementary School : 6-12 years old</div>
+                    <div class="juxtapose">Kindergarten : 4-6 years old</div>
+                </div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Number of teachers</div>
+                <div class="school-info-content">
+                    <div class="juxtapose">Elementary School : 100</div>
+                    <div class="juxtapose">Kindergarten : 7</div>
+                </div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Number of students</div>
+                <div class="school-info-content">
+                    <div class="juxtapose">Elementary School : 1100-1200</div>
+                    <div class="juxtapose">Kindergarten : 80-90</div>
+                </div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Main instruction language</div>
+                <div class="school-info-content">Chinese. Taiwanese</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Foreign Language programmes</div>
+                <div class="school-info-content">English, some students learn Vietnamese</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Brief school history</div>
+                <div class="school-info-content">This year we are celebrating our 120th anniversary of the Campus. Our
+                    school was established in the 36th year of the Meijiera during the Japanese colonial period (1903
+                    AD); located on Xidatu Street, it officially enrolled students the following year with only 98
+                    students at the time. Subsequently, through the dedicated efforts of principals and faculty members,
+                    enduring countless hardships and overcoming numerous challenges, over the decades, it has grown to
+                    its present scale. The cumulative number of graduates has exceeded 103,000, among whom there are
+                    pillars of the nation and stalwarts of society, demonstrating the indispensable role of our
+                    institution in nurturing talent for the country and society.</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">School environment</div>
+                <div class="school-info-content">The school is located near the renowned "Fengjia Night Market" in
+                    Taiwan's Taichung, adjacent to major transportation arteries. Despite being in the city center, the
+                    campus spans 3.4 hectares, adorned with lush greenery, earning it the title of the "Green Heart" of
+                    the urban area. Within the campus, there are amenities such as a 200-meter track, outdoor sports
+                    fields, indoor sports halls, indoor amusement halls, the most beautiful co-reading library in the
+                    city, a farm, and a butterfly garden, making it a beautiful and vibrant campus.</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">School features</div>
+                <div class="school-info-content">Our school's vision is centered around "innovation, sustainability,
+                    vitality, and benevolence." Despite being a 120-year-old institution, we maintain a dynamic approach
+                    to continuous innovation and development. Our main featured clubs include flute, soccer, dodgeball,
+                    and volleyball, alongside language clubs, reading clubs, and various others, allowing children to
+                    freely develop in all aspects. We aspire for every child to have the freedom to develop their
+                    talents.</div>
+            </div>
+            <div class="school-info">
+                <div class="school-info-title">Special Features of
+                    the Curriculum</div>
+                <div class="school-info-content">
+                    <div class="juxtapose">Technology Situn:</div>
+                    <div class="juxtapose">Computer program and steam projects are held to motivate students’ interest
+                        in E-Learning.</div>
+                    <div class="juxtapose">Reading Situn:</div>
+                    <div class="juxtapose">Reading activities are actively promoted to help develop an appreciation for
+                        culture and literature.</div>
+                    <div class="juxtapose">Aesthetics Situn:</div>
+                    <div class="juxtapose">A variety of art diplays in visual art and music for students are regularly
+                        held to foster their interest in the Arts.</div>
+                    <div class="juxtapose">Internation Situn:</div>
+                    <div class="juxtapose">To create the best environment in classrooms dedicated to bilingual education
+                        and international education, teaching facilities have been improved greatly.</div>
+                    <div class="juxtapose">Eco Stiun:</div>
+                    <div class="juxtapose">Programs for ecological education are promoted to foster students’ sense of
+                        caring for their surroundings.</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 頁尾 -->
+        <div>
+            <footer>
+                <div class="footer-top">
+                    <div class="header-group">
+                        <div class="school-title">
+                            <img src="./img/西屯國小校徽.png" alt="學校logo" class="footer-logo">
+                            <div class="school-name">
+                                <h3>臺中市西屯區西屯國民小學</h3>
+                                <p>Situn Elementary School/ Taiwan Taichung</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <div class="school-address">
+                            <p>臺中市西屯區西屯國小 地址：40749 台中市西屯路二段300號</p>
+                            <p>No. 300, Sec. 2, Xitun Rd., Xitun Dist., Taichung City 407 , Taiwan</p>
+                            <p>| TEL：04-27013534 | FAX：04-27026914</p>
+                        </div>
+                        <div class="nav-items">
+                            <div class="nav-item">
+                                <img src="./img/西屯校友會.svg" alt="西屯校友會">
+                                <span>校刊電子報</span>
+                            </div>
+                            <div class="nav-item">
+                                <img src="./img/故事爸媽成長團.svg" alt="故事爸媽成長團">
+                                <span>西屯粉絲團</span>
+                            </div>
+                            <div class="nav-item">
+                                <img src="./img/西屯粉絲團.svg" alt="西屯粉絲團">
+                                <span>故事爸媽成長團</span>
+                            </div>
+                            <div class="nav-item">
+                                <img src="./img/校刊西屯兒童.svg" alt="校刊西屯兒童">
+                                <span>校園影片頻道</span>
+                            </div>
+                            <div class="nav-item">
+                                <img src="./img/youtube.svg" alt="校園影片頻道">
+                                <span>校園影片頻道</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-left">
+                        <a href="#" class="footer-link">隱私權政策</a>
+                        <a href="#" class="footer-link">版權宣告</a>
+                        <a href="#" class="footer-link">網站安全政策</a>
+                    </div>
+                    <div class="footer-right">
+                        <span>更新日期：2025-01-23</span>
+                        <span>瀏覽人次：694,161,645</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+        <script>
+            // 漢堡
+            document.addEventListener('DOMContentLoaded', () => {
+    // 獲取所需元素
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeBtn = document.querySelector('.close-btn');
+    const menu = document.getElementById('hamburger-menu');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const contentPanels = document.querySelectorAll('.content-panel');
+    let activeItem = null;
+
+    const adminMenuItem = document.querySelector('.menu-item[data-tab="6"] .highlight-bar');
+    const siteMapMenuItem = document.querySelector('.menu-item[data-tab="7"] .highlight-bar');
+    
+    // 隐藏高亮条
+    if (adminMenuItem) {
+        adminMenuItem.style.display = 'none';
+    }
+    if (siteMapMenuItem) {
+        siteMapMenuItem.style.display = 'none';
+    }
+    // 切換選單
+    function toggleMenu() {
+        const isOpen = menu.style.right === '0px';
+        
+        if (isOpen) {
+            menu.style.right = '-100%';
+            document.body.style.overflow = '';
+            
+            // 重置所有面板和選單項目
+            contentPanels.forEach(panel => {
+                panel.classList.remove('active');
+                panel.style.transform = 'translateX(30px)';
+                panel.style.opacity = '0';
+                panel.style.display = 'none';
+                panel.style.height = '0';
+                
+                // 確保面板回到原始位置
+                const panelParent = document.querySelector('.content-container');
+                if (panelParent && panel.parentElement !== panelParent) {
+                    panelParent.appendChild(panel);
+                }
+            });
+            
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                item.style.backgroundColor = '';
+                const text = item.querySelector('.menu-text');
+                if (text) text.style.color = 'white';
+            });
+            
+            activeItem = null;
+        } else {
+            menu.style.right = '0';
+            document.body.style.overflow = 'hidden';
+            
+            // 重新初始化第一個選項
+            if (window.innerWidth > 480) {
+                const firstItem = menuItems[0];
+                if (firstItem) {
+                    firstItem.click();
+                }
+            }
+        }
+    }
+
+    // 桌面版選單切換
+    function switchDesktopContent(item) {
+        const tabId = item.getAttribute('data-tab');
+        const isSpecialTab = tabId === '6' || tabId === '7';
+
+        // 重置所有面板
+        contentPanels.forEach(panel => {
+            panel.classList.remove('active');
+            panel.style.transform = 'translateX(30px)';
+            panel.style.opacity = '0';
+            panel.style.display = 'none';
+        });
+
+        // 重置所有選單項目
+        menuItems.forEach(menuItem => {
+            menuItem.classList.remove('active');
+            menuItem.style.backgroundColor = '';
+            const text = menuItem.querySelector('.menu-text');
+            if (text) text.style.color = 'white';
+        });
+
+        // 設置新的活動項目
+        item.classList.add('active');
+        item.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        const itemText = item.querySelector('.menu-text');
+        if (itemText) itemText.style.color = 'white';
+
+        if (isSpecialTab) return;
+
+        // 啟用對應的面板
+        const selectedPanel = document.getElementById(`content${tabId}`);
+        if (selectedPanel) {
+            selectedPanel.style.display = 'block';
+            selectedPanel.classList.add('active');
+
+            // 重新計算位置
+            const menuContainer = document.querySelector('.menu-container');
+            if (menuContainer) {
+                const containerRect = menuContainer.getBoundingClientRect();
+                const contentItems = selectedPanel.querySelectorAll('.content-item');
+                
+                contentItems.forEach((contentItem, index) => {
+                    const correspondingMenuItem = menuItems[index];
+                    if (correspondingMenuItem) {
+                        const menuRect = correspondingMenuItem.getBoundingClientRect();
+                        contentItem.style.position = 'absolute';
+                        contentItem.style.top = `${menuRect.top - containerRect.top}px`;
+                    }
+                });
+            }
+
+            // 動畫效果
+            requestAnimationFrame(() => {
+                selectedPanel.style.transform = 'translateX(0)';
+                selectedPanel.style.opacity = '1';
+            });
+        }
+
+        activeItem = item;
+    }
+
+    // 手機版選單切換
+    function switchMobileContent(item) {
+        const tabId = item.getAttribute('data-tab');
+        if (tabId === '6' || tabId === '7') return;
+
+        const panel = document.getElementById(`content${tabId}`);
+        if (!panel) return;
+
+        const isExpanded = item.classList.contains('active');
+
+        // 重置所有面板和選單項目
+        menuItems.forEach(menuItem => {
+            menuItem.classList.remove('active');
+            const otherPanel = document.getElementById(`content${menuItem.getAttribute('data-tab')}`);
+            if (otherPanel) {
+                otherPanel.style.display = 'none';
+                otherPanel.style.height = '0';
+                otherPanel.style.transform = 'none';
+                otherPanel.style.opacity = '1';
+                // 確保面板回到原始位置
+                const panelParent = document.querySelector('.content-container');
+                if (panelParent && otherPanel.parentElement !== panelParent) {
+                    panelParent.appendChild(otherPanel);
+                }
+            }
+        });
+
+        // 如果當前項目已經展開，則只做重置
+        if (isExpanded) {
+            return;
+        }
+
+        // 設置當前項目和面板的狀態
+        item.classList.add('active');
+        panel.style.display = 'block';
+        panel.style.height = 'auto';
+        
+        // 將面板插入到正確位置
+        const itemParent = item.parentNode;
+        if (itemParent) {
+            itemParent.insertBefore(panel, item.nextSibling);
+        }
+    }
+
+    // 事件監聽
+    hamburgerBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    
+    menu.addEventListener('click', (e) => {
+        if (e.target === menu) {
+            toggleMenu();
+        }
+    });
+
+    // 選單項目點擊
+    menuItems.forEach(item => {
+        const menuText = item.querySelector('.menu-text');
+
+        if (menuText) {
+            menuText.addEventListener('mouseenter', () => {
+                if (window.innerWidth > 480) {
+                    menuText.style.transform = 'translateX(10px)';
+                    menuText.style.color = '#FFEFCB';
+                }
+            });
+
+            menuText.addEventListener('mouseleave', () => {
+                if (window.innerWidth > 480) {
+                    menuText.style.transform = '';
+                    menuText.style.color = item === activeItem ? 'white' : 'white';
+                }
+            });
+        }
+
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (window.innerWidth <= 480) {
+                switchMobileContent(item);
+            } else {
+                switchDesktopContent(item);
+            }
+        });
+    });
+
+    // 視窗大小變化處理
+    window.addEventListener('resize', () => {
+        const contentContainer = document.querySelector('.content-container');
+        
+        if (window.innerWidth <= 480) {
+            // 重置所有狀態
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                const panel = document.getElementById(`content${item.getAttribute('data-tab')}`);
+                if (panel) {
+                    panel.style.display = 'none';
+                    panel.style.height = '0';
+                    // 確保面板回到原始位置
+                    if (contentContainer && panel.parentElement !== contentContainer) {
+                        contentContainer.appendChild(panel);
+                    }
+                }
+            });
+        } else {
+            // 桌面版初始化
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                const panel = document.getElementById(`content${item.getAttribute('data-tab')}`);
+                if (panel) {
+                    panel.style.display = 'none';
+                }
+            });
+            const firstItem = menuItems[0];
+            if (firstItem) firstItem.click();
+        }
+    });
+
+    // 初始化
+    if (window.innerWidth > 480) {
+        const firstItem = menuItems[0];
+        if (firstItem) firstItem.click();
+    }
+});
+
+        </script>
