@@ -97,7 +97,7 @@ body::-webkit-scrollbar {
 .upper-part {
     width: 100vw;        /* 使用視窗寬度 */
     min-width: 100vw;    /* 最小寬度也是視窗寬度 */
-    background-image: url('../img/背景(下).png');       
+    background-image: url('../img/背景(下).webp');       
     background-size: cover;  /* 背景圖片完整覆蓋 */
     background-position: center;  /* 背景圖片置中 */
     position: relative;
@@ -907,7 +907,7 @@ nav {
     min-width: 100vw;    /* 最小寬度也是視窗寬度 */
     padding-top: 650px;
     min-height: 2400px;
-    background-image: url('../img/背景(上).png');
+    background-image: url('../img/背景(上).webp');
     background-size: 100% 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -3089,7 +3089,7 @@ nav {
     min-width: 100vw;
     padding-top: 400px;  /* 減少上方 padding */
     min-height: 1800px;  /* 減少最小高度 */
-    background-image: url('../img/背景(上).png');
+    background-image: url('../img/背景(上).webp');
     background-size: 100% 100%; 
     background-position: center;
     background-repeat: no-repeat;
